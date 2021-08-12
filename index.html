@@ -6,26 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 
-    <script>
-        var myAppModule = angular.module('myApp', []);
-
-        myAppModule.filter('greet', function(){
-            return function(name){
-                return 'Hello' + name + '!';
-
-            };
-        });
-
-    </script>
-
-   
+   <script src="components.js"></script>
+   <script src="app.js"></script>
+   <link rel="stylesheet" type="text/css" href="style.css">
     <title>Angularjs</title>
 </head>
 <body>
-    <div ng-app="myApp">
+    <div id="conteudo-principal" ng-app="myApp">
         <div>
             {{'world' | greet}}
         </div>
+    </div>
+    <div id="buttom">
+    <input  id="fechar" type="button" value="Fechar" onclick="close_window()"> 
     </div>
 </body>
 </html>
