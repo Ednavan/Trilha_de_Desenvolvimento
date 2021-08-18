@@ -1,24 +1,109 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" ng-app="meuModulo">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controllers.js"></script>
+    <script src="lib/angular.min.js"></script>
+    <script src="js/materialize/"></script>
 
-   <script src="components.js"></script>
-   <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+ 
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
    <link rel="stylesheet" type="text/css" href="style.css">
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <title>Angularjs</title>
 </head>
-<body>
-    <div id="conteudo-principal" ng-app="myApp">
-        <div>
-            {{'world' | greet}}
+<body ng-controller="indexController">
+
+    <nav>
+        <div class="nav-wrapper">
+           
         </div>
-    </div>
-    <div id="buttom">
-    <input  id="fechar" type="button" value="Fechar" onclick="close_window()"> 
-    </div>
+            
+        </div>
+    </nav>
+
+  
+    <!--
+        <div class="row-banner">
+            <img class="banner" src="img/banner.png" alt="banner">
+        </div>
+-->
+
+
+  
+        <main class="container">
+            <div class="row"> <!--class do materialize que determina uma linha no layout-->
+                <!--criando campo de busca-->
+                
+    
+                <input type="text" placeholder="Busca" ng-model="busca" > <!--caso desejar filtrar apenas por nome-->
+    
+                {{busca}}
+            </div>
+
+            
+            {{titulo}}
+
+            
+        
+
+            <div>
+                <table class="centered">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            
+                        </tr>
+                    </thead>
+
+
+                 
+         
+                    <tbody>
+                        <tr > <!--criei uma variável aluno o (| filter:busca), filtra alunos, com base no input que foi definido acima (<input type="text" placeholder="Busca" ng-model="busca">)-->
+                            <td>{{produto.nome}}</td>
+                           
+         
+                        </tr>
+                    </tbody>
+                    
+                </table>
+                     
+                
+            </div>
+
+
+                <div class="card" ng-repeat="produto in produtos | filter:busca">
+                     <img src="img/cabo.jpg" alt="Card image cap">
+                     <div id="card-body1">
+                     <h5 id="nome1">Cabo de Rede Patch Cord CAT5E RJ45 Azul Exbom CBX-N5C10 1 METRO</h5>
+                     <p class="card-text">R$ 4,25</p>
+                     <p class="card-text"><small class="text-muted">Amazon.com.br</small></p>
+                     </div>
+
+                     
+                   
+                </div>
+
+            </div>
+
+           
+        </main>
+    
 </body>
+
+<footer>
+    <h1>-</h1>
+</footer>
+
 </html>
