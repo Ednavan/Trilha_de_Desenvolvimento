@@ -9,7 +9,7 @@
     <script src="app/app.js"></script>
     <script src="app/controllers.js"></script>
     <script src="lib/angular.min.js"></script>
-    <script src="js/materialize/"></script>
+  
 
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -38,72 +38,42 @@
             <img class="banner" src="img/banner.png" alt="banner">
         </div>
 -->
-
-
-  
-        <main class="container">
-            <div class="row"> <!--class do materialize que determina uma linha no layout-->
+    <main class="container">
+        <div class="row"> <!--class do materialize que determina uma linha no layout-->
                 <!--criando campo de busca-->
+        <input type="text" placeholder="Busca" ng-model="busca" > <!--caso desejar filtrar apenas por nome-->
+        {{busca}}
+        </div>
+
+        {{titulo}}
+
+        <!--
+            <div class="card">
+                <div class="car-image waves-effect waves-block waves-light"></div>
                 
-    
-                <input type="text" placeholder="Busca" ng-model="busca" > <!--caso desejar filtrar apenas por nome-->
-    
-                {{busca}}
+                
             </div>
-
-            
-            {{titulo}}
-
-            
-        
-
-            <div>
-                <table class="centered">
-                    <thead>
-                        <tr>
-                            <th>Nome</th>
-                            
-                        </tr>
-                    </thead>
+        -->
 
 
+
+            <div class="card" style="width: 18rem;" ng-repeat="lista in arrayProdutos | filter:busca">
+                <img src="" class="card-img-top" alt="...">
+               
+                <div class="card-body" >
+                    <p>{{lista.produto}}</p>
+                    <p>{{lista.descricao}}</p>
+                    <p>{{lista.valor}}</p>
                  
-         
-                    <tbody>
-                        <tr > <!--criei uma variável aluno o (| filter:busca), filtra alunos, com base no input que foi definido acima (<input type="text" placeholder="Busca" ng-model="busca">)-->
-                            <td>{{produto.nome}}</td>
-                           
-         
-                        </tr>
-                    </tbody>
-                    
-                </table>
-                     
-                
-            </div>
-
-
-                <div class="card" ng-repeat="produto in produtos | filter:busca">
-                     <img src="img/cabo.jpg" alt="Card image cap">
-                     <div id="card-body1">
-                     <h5 id="nome1">Cabo de Rede Patch Cord CAT5E RJ45 Azul Exbom CBX-N5C10 1 METRO</h5>
-                     <p class="card-text">R$ 4,25</p>
-                     <p class="card-text"><small class="text-muted">Amazon.com.br</small></p>
-                     </div>
-
-                     
-                   
                 </div>
-
-            </div>
-
-           
-        </main>
+                
+              </div>
+    </main>
     
 </body>
 
 <footer>
-    <h1>-</h1>
+    <h6>informações adicionais</h6>
 </footer>
 
 </html>
