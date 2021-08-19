@@ -57,13 +57,13 @@
         -->
 
             <div class="row container highlight-seeds">
-
-
-            <div class="card" style="width: 18rem;" ng-repeat="lista in arrayProdutos | filter:busca">
                 
-                <img src=".." alt="">
+                
+                <div class="card" style="width: 18rem;" ng-repeat="lista in arrayProdutos | filter:buscar">
+                    <img  ng-src="{{arrayProdutos.produtos}}" alt=""> <!--em verificação-->
+                    
                 <div class="card-body">
-                
+                    
                     <p>{{lista.produto}}</p>
                     <p>{{lista.descricao}}</p>
                     <p>{{lista.valor}}</p>
@@ -72,6 +72,42 @@
           
               </div>
 
+             
+
+            </div>
+
+
+
+
+
+              
+
+
+
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             </div>
         
     </main>
@@ -79,10 +115,7 @@
 </body>
 
 <footer id="rodape">
-    <h6>informações adicionais
-    </h6>
-
-    <p>CONTATO</p>
+    
 </footer>
 
 </html>
