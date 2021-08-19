@@ -47,27 +47,41 @@
 
         {{titulo}}
 
+
+
+
         <!--
             <div class="card">
                 <div class="car-image waves-effect waves-block waves-light"></div>
-                
-                
             </div>
         -->
 
+            <div class="row container highlight-seeds">
 
 
             <div class="card" style="width: 18rem;" ng-repeat="lista in arrayProdutos | filter:busca">
-                <img src="" class="card-img-top" alt="...">
-               
-                <div class="card-body" >
+                
+                <img src=".." alt="">
+                <div class="card-body">
+                
                     <p>{{lista.produto}}</p>
                     <p>{{lista.descricao}}</p>
                     <p>{{lista.valor}}</p>
-                 
-                </div>
                 
+                </div>
+          
               </div>
+
+            </div>
+            
+
+      
+            
+    
+
+
+
+
     </main>
     
 </body>
