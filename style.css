@@ -1,6 +1,7 @@
 *{
     margin: 0 auto;
     padding: 0;
+  
 }
 
 #menu{
@@ -35,4 +36,14 @@ border: red 1px solid;
 
 .col-sm{
     border: blue 2px solid;
+}
+
+#rodape{
+    position:absolute;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background: rgb(0, 0, 0);
+    color: #ffff;
+    text-align: center;
 }
