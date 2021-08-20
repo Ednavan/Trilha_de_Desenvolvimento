@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br" ng-app="meuModulo">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,113 +10,96 @@
     <script src="app/app.js"></script>
     <script src="app/controllers.js"></script>
     <script src="lib/angular.min.js"></script>
-  
 
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
- 
-    <link rel="stylesheet" type="text/css" href="style.css">
-    
-   <link rel="stylesheet" type="text/css" href="style.css">
 
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <title>Angularjs</title>
 </head>
+
 <body ng-controller="indexController">
 
     <nav>
         <div class="nav-wrapper">
-           
+
         </div>
-            
+
         </div>
     </nav>
 
-  
+
     <!--
         <div class="row-banner">
             <img class="banner" src="img/banner.png" alt="banner">
         </div>
 -->
     <main class="container">
-        <div class="row"> <!--class do materialize que determina uma linha no layout-->
-                <!--criando campo de busca-->
-        <input type="text" placeholder="Busca" ng-model="busca" > <!--caso desejar filtrar apenas por nome-->
-        {{busca}}
+        <div class="row">
+            <!--class do materialize que determina uma linha no layout-->
+            <!--criando campo de busca-->
+            <input type="text" placeholder="Busca" ng-model="busca">
+            <!--caso desejar filtrar apenas por nome-->
+            {{busca}}
         </div>
 
         {{titulo}}
 
+        <div class="row container highlight-seeds">
 
 
+            <div class="card" style="width: 18rem" ng-repeat="lista in arrayProdutos | filter:busca">
 
-        <!--
-            <div class="card">
-                <div class="car-image waves-effect waves-block waves-light"></div>
-            </div>
-        -->
 
-            <div class="row container highlight-seeds">
-                
-                
-                <div class="card" style="width: 18rem;" ng-repeat="lista in arrayProdutos | filter:buscar">
-                    <img  ng-src="{{arrayProdutos.produtos}}" alt=""> <!--em verificação-->
-                    
                 <div class="card-body">
-                    
+
                     <p>{{lista.produto}}</p>
                     <p>{{lista.descricao}}</p>
                     <p>{{lista.valor}}</p>
-                
+
                 </div>
-          
-              </div>
-
-             
-
+                
+            <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Adicionar</a>
             </div>
 
 
 
-
-
-              
-
-
-
-              
+        </div>
 
 
 
+        <!--ng-repeat cards com imagens-->
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            </div>
-        
-    </main>
     
+        </div>
+
+
+    </main>
+
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+
 </body>
 
+
 <footer id="rodape">
-    
+
 </footer>
 
 </html>
+
