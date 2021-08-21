@@ -64,17 +64,14 @@
                     <p>{{lista.valor}}</p>
 
                 </div>
-                
-                     <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Adicionar</a> 
-                    </br>
-                     <a class="waves-effect waves-light btn modal-trigger" href="#modal2">Editar</a> 
+            
             </div>
-
-
-
+           
         </div>
 
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Adicionar</a>
 
+        <a class="waves-effect waves-light btn modal-trigger" href="#modal2">Editar</a> 
 
         <!--ng-repeat cards com imagens-->
 
@@ -89,8 +86,20 @@
   <div id="modal1" class="modal">
     <div class="modal-content">
       <h4>Preencha os dados do produto</h4>
-      <p></p>
+      <div class="row"> 
+          <div class="input-field col s6"> <!--(s12)para sistema mobile quando tem com a sigla s, já (m) para desktop-->
+            <input type="text" class="validate">
+            <label for="last_name">Produto</label>
+          </div>
+
+
+         
+
+
+      </div>
     </div>
+
+
     <div class="modal-footer">
       <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
     </div>
@@ -102,7 +111,7 @@
     <div class="modal-content">
       <h4>edite seus produtos</h4>
       <p></p>
-    </div>
+    
     <div class="modal-footer">
       <a href="#!" class="modal-close waves-effect waves-green btn-flat">Agree</a>
     </div>
