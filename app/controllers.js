@@ -15,6 +15,12 @@ angular.module("meuModulo").controller("indexController", function ($scope) {
         
     };
 
+
+    $scope.removeProduto = function(){
+        $scope.arrayProdutos.delete({produto: $scope.removeConteudo.produto});
+        
+    }
+
 });
 
 document.addEventListener('DOMContentLoaded', function() {
