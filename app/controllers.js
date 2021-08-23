@@ -10,7 +10,7 @@ angular.module("meuModulo").controller("indexController", function ($scope) {
     ];
    
     $scope.adicionaProduto = function(){
-        $scope.arrayProdutos.push({produto: $scope.lista.produto});
+        $scope.arrayProdutos.push({produto: $scope.lista.produto, descricao: $scope.lista.descricao, valor: $scope.lista.valor});
         $scope.lista.produto = '';
         
     };

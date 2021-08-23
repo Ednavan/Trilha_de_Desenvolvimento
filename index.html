@@ -90,6 +90,8 @@
           <div class="input-field col s6"  > <!--(s12)para sistema mobile quando tem com a sigla s, já (m) para desktop-->
             <form class="form-inline" name="formItem"></form>
             <input type="text" ng-model="lista.produto">
+            <input type="text" ng-model="lista.descricao">
+            <input type="text" ng-model="lista.valor">
             <button ng-click="adicionaProduto()">Adicionar Produto</button>
           </div>
       </div>
@@ -98,7 +100,7 @@
 
 
     <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat" ng-model="arrayProdutos.produto" ng-click="adicionaProduto">confirmar</a>
+      <a href="#!" class="modal-close waves-effect waves-green btn-flat">confirmar</a>
     </div>
   </div>
 
