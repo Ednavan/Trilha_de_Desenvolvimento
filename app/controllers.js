@@ -10,8 +10,8 @@ angular.module("meuModulo").controller("indexController", function ($scope) {
     ];
    
     $scope.adicionaProduto = function(){
-        $scope.arrayProdutos.push({produto: $scope.lista.produto, descricao: $scope.lista.descricao, valor: $scope.lista.valor});
-        $scope.lista.produto = '';
+        $scope.arrayProdutos.push({produto: $scope.conteudo.produto, descricao: $scope.conteudo.descricao, valor: $scope.conteudo.valor});
+        $scope.conteudo.produto = ''; /*definindo uma funcao que vai dar push para minha array utilizando o @scope*/
         
     };
 
