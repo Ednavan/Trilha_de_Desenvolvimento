@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="pt-br" ng-app="meuModulo">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,124 +9,106 @@
     <script src="app/app.js"></script>
     <script src="app/controllers.js"></script>
     <script src="lib/angular.min.js"></script>
+    <script src="materialize/css/materialize.css"></script>
+    <script src="materialize/css/materialize.min.css"></script>
 
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-
+    
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">  
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <link rel="stylesheet" type="text/css" href="style.css">
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+        
+    <title>Angularjs</title>    
 
-    <title>Angularjs</title>
 </head>
 
 <body ng-controller="indexController">
-
-    <nav>
-        <div class="nav-wrapper">
-
-            <h1>Lojinha Virtual Só Vamú</h1>
-
+    <nav id="menu">
+        <div class="container">
+            <h1 class="titulo">Lojinha Virtual Só Vamú</h1>
+        </div>
     </nav>
 
 
-    <!--
-        <div class="row-banner">
-            <img class="banner" src="img/banner.png" alt="banner">
-        </div>
--->
-    <main class="container">
-        <div class="row">
-            <!--class do materialize que determina uma linha no layout-->
-            <!--criando campo de busca-->
-            <input type="text" placeholder="Busca" ng-model="busca">
-            <!--caso desejar filtrar apenas por nome-->
+    </div>
+    <main class="container ">
+        
+       <div class="row">
+            <input type="text" placeholder="Buscar" ng-model="busca">
             {{busca}}
-        </div>
+       </div>
 
-        {{titulo}}
-
-        <div class="row container highlight-seeds">
-
-
-            <div class="card" style="width: 18rem" ng-repeat="lista in arrayProdutos | filter:busca">
-
-
-                <div class="card-body">
-
+       <div class="row container highlight-seeds">
+           <div class="card" style="width: 18rem" ng-repeat="lista in arrayProdutos | filter:busca">
+               <div class="card-body">
                     <p>{{lista.produto}}</p>
                     <p>{{lista.descricao}}</p>
                     <p>{{lista.valor}}</p>
+               </div>
+           </div>
+       </div>
+       <a class="waves-effect waves-light btn modal-trigger" href="#modal1" >Adicionar</a>
+       <a class="waves-effect waves-light btn modal-trigger" href="#modal2">Editar</a>
 
-                </div>
-            
-            </div>
-           
-        </div>
-
-            <a class="waves-effect waves-light btn modal-trigger" href="#modal1" >Adicionar</a>
-
-            <a class="waves-effect waves-light btn modal-trigger" href="#modal2">Editar</a> 
-
-        <!--ng-repeat cards com imagens-->
-
+       
+       
+       <div id="modal1" class="modal">
+        <div class="modal-content">
+          <h4>Preencha os dados do produto</h4>
+          <div class="row"> 
+              <div class="input-field col s6"  > <!--(s12)para sistema mobile quando tem com a sigla s, já (m) para desktop-->
+            <form class="form-inline" name="formItem">
+                <input type="text" placeholder="Produto" ng-model="conteudo.produto">
+                <input type="text" placeholder="Descrição" ng-model="conteudo.descricao">
+                <input type="text" placeholder="valor" ng-model="conteudo.valor">
+                <button ng-click="adicionaProduto()">Adicionar Produto</button>
+            </form>
+              </div>
+          </div>
     
         </div>
 
+        <div class="modal-footer">
+            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Fechar</a> <!--basicimanete com a funçao de fechar o meu modal-->
+          </div>
+        </div>
 
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+              <h4>edite seus produtos</h4>
+              <div class="row">
+                <form class="form-inline" name="formItem">
+                    <input type="text" placeholder="Insira o produto que deseja remover" ng-model="removeConteudo.produto">
+                    
+                    <button ng-click="removeProduto($produto)">Remover</button>
+                </form>
+              </div>
+            <div class="modal-footer">
+              <a href="#!" class="modal-close waves-effect waves-green btn-flat">Fechar</a>
+            </div>
+          </div>
+       
     </main>
 
-
-  <!-- Modal Structure -->
-  <div id="modal1" class="modal">
-    <div class="modal-content">
-      <h4>Preencha os dados do produto</h4>
-      <div class="row"> 
-          <div class="input-field col s6"  > <!--(s12)para sistema mobile quando tem com a sigla s, já (m) para desktop-->
-        <form class="form-inline" name="formItem">
-            <input type="text" placeholder="Produto" ng-model="conteudo.produto">
-            <input type="text" placeholder="Descrição" ng-model="conteudo.descricao">
-            <input type="text" placeholder="valor" ng-model="conteudo.valor">
-            <button ng-click="adicionaProduto()">Adicionar Produto</button>
-        </form>
-          </div>
-      </div>
-
-    </div>
-
-
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Fechar</a> <!--basicimanete com a funçao de fechar o meu modal-->
-    </div>
-  </div>
-
-
- <!-- Modal Structure -->
- <div id="modal2" class="modal">
-    <div class="modal-content">
-      <h4>edite seus produtos</h4>
-      <div class="row">
-        <form class="form-inline" name="formItem">
-            <input type="text" placeholder="Insira o produto que deseja remover" ng-model="removeConteudo.produto">
-            
-            <button ng-click="removeProduto($produto)">Remover</button>
-        </form>
-      </div>
-    <div class="modal-footer">
-      <a href="#!" class="modal-close waves-effect waves-green btn-flat">Fechar</a>
-    </div>
-  </div>
-
+   
 
 </body>
-
-
-<footer id="rodape">
-
+  
+<footer id="myFooter">       
+    <div class="w3-bar">
+        <a href="#" class="w3-button">&laquo;</a>
+        <a href="#" class="w3-button">1</a>
+        <a href="#" class="w3-button">2</a>
+        <a href="#" class="w3-button">3</a>
+        <a href="#" class="w3-button">4</a>
+        <a href="#" class="w3-button">5</a>
+        <a href="#" class="w3-button">&raquo;</a>
+      </div>
 </footer>
-
 </html>
-
