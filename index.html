@@ -23,6 +23,8 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
         
     <title>Angularjs</title>    
 
@@ -67,15 +69,15 @@
        <div class="row container highlight-seeds">
            <div class="card" style="width: 18rem" ng-repeat="lista in arrayProdutos | filter:busca">
                <div class="card-body">
-                    <p>{{lista.produto}}</p>
-                    <p>{{lista.descricao}}</p>
-                    <p>{{lista.valor}}</p>
+                    <p>{{lista.produto}}</p> 
+                    <p>{{lista.descricao}}</p> 
+                    <p>{{lista.valor}}</p> <a href="" ng-click="removeProduto($index)"><i class="material-icons">delete</i></a> 
                </div>
            </div>
        </div>
     
        <a class="waves-effect waves-light btn modal-trigger" href="#modal1" >Adicionar</a>
-       <a class="waves-effect waves-light btn modal-trigger" href="#modal2">Remover</a>
+
  
        
        <div class="switch_container">
@@ -100,13 +102,15 @@
           </div>
         </div>
 
+
+      <!--
         <div id="modal2" class="modal">
             <div class="modal-content">
               <h4>edite seus produtos</h4>
               <div class="row">
                 <form class="form-inline" name="formItem">
                     <input type="text" placeholder="Insira o produto que deseja remover" ng-model="removeProduto.arrayProdutos">
-                    <button ng-click="removeProduto()">Remover</button>
+                    <button>Remover</button>
                 </form>
               </div>
             <div class="modal-footer">
@@ -114,6 +118,7 @@
             </div>
           </div>
         </div>
+    -->
    
     </main>
 
