@@ -16,11 +16,14 @@ angular.module("meuModulo").controller("indexController", function ($scope) {
     };
 
 
-    $scope.removeProduto = function(index){
-      $scope.arrayProdutos.splice(index,1)
-            
-                }
-            
+    $scope.removeProduto = function(produto){
+    
+        for(var i=0, length=arrayProdutos.length; i <length;i++){
+            if(produto[i], id === produto.id){
+                arrayProdutos.splice(i,1);
+            }
+        }
+    }          
     
       
 });
