@@ -11,7 +11,7 @@
     <script src="lib/angular.min.js"></script>
     <script src="materialize/css/materialize.css"></script>
     <script src="materialize/css/materialize.min.css"></script>
-
+  
     <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     
@@ -37,7 +37,27 @@
 
 
     </div>
+
+
+
     <main class="container ">
+      <!--
+        <div class="switch_container">
+         
+          <input id="switch-shadow" class="switch switch--shadow"  type="checkbox"  >
+         
+          <label for="switch-shadow"></label>
+          
+          
+        </div>  
+        
+
+        <div class="tag">
+          <p>Esta div não pode ser exibida</p>
+
+        </div>
+        <h1>titulo</h1>
+-->
         
        <div class="row">
             <input type="text" placeholder="Buscar" ng-model="busca">
@@ -53,11 +73,12 @@
                </div>
            </div>
        </div>
+    
        <a class="waves-effect waves-light btn modal-trigger" href="#modal1" >Adicionar</a>
-       <a class="waves-effect waves-light btn modal-trigger" href="#modal2">Editar</a>
-
+       <a class="waves-effect waves-light btn modal-trigger" href="#modal2" ng-click="removeProduto()">Remover</a>
+ 
        
-       
+       <div class="switch_container">
        <div id="modal1" class="modal">
         <div class="modal-content">
           <h4>Preencha os dados do produto</h4>
@@ -65,7 +86,10 @@
               <div class="input-field col s6"  > <!--(s12)para sistema mobile quando tem com a sigla s, já (m) para desktop-->
             <form class="form-inline" name="formItem">
                 <input type="text" placeholder="Produto" ng-model="conteudo.produto">
-                <input type="text" placeholder="Descrição" ng-model="conteudo.descricao">
+                <input type="text" pl
+                
+                
+                aceholder="Descrição" ng-model="conteudo.descricao">
                 <input type="text" placeholder="valor" ng-model="conteudo.valor">
                 <button ng-click="adicionaProduto()">Adicionar Produto</button>
             </form>
@@ -84,16 +108,16 @@
               <h4>edite seus produtos</h4>
               <div class="row">
                 <form class="form-inline" name="formItem">
-                    <input type="text" placeholder="Insira o produto que deseja remover" ng-model="removeConteudo.produto">
+                    <input type="text" placeholder="Insira o produto que deseja remover" ng-model="removeProduto.arrayProdutos">
                     
-                    <button ng-click="removeProduto($produto)">Remover</button>
+                    <button ng-click="removeProduto()">Remover</button>
                 </form>
               </div>
             <div class="modal-footer">
               <a href="#!" class="modal-close waves-effect waves-green btn-flat">Fechar</a>
             </div>
           </div>
-       
+   
     </main>
 
    

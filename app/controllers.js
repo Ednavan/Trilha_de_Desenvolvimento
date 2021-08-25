@@ -2,10 +2,10 @@ angular.module("meuModulo").controller("indexController", function ($scope) {
     $scope.titulo = "FILTRO";
     $scope.arrayProdutos = [
 
-        { produto: "Notebook", descricao: "DellBrasil", valor: "R$ 3.197,00",  }, /*com o img, quero armazenar imagem*/
-        { produto: "Cabo de Enthernet", descricao: "Amazon", valor: "R$ 220,00" },
-        { produto: "Mouse", descricao: "logitech", valor: "R$ 140,00" },
-        { produto: "Celular Xiaomi", descricao: "Amazon", valor: "R$ 987,00" },
+        { id:1, produto: "Notebook", descricao: "DellBrasil", valor: "R$ 3.197,00",  }, /*com o img, quero armazenar imagem*/
+        { id:2, produto: "Cabo de Enthernet", descricao: "Amazon", valor: "R$ 220,00" },
+        { id:3, produto: "Mouse", descricao: "logitech", valor: "R$ 140,00" },
+        { id:4, produto: "Celular Xiaomi", descricao: "Amazon", valor: "R$ 987,00" },
 
     ];
    
@@ -16,11 +16,14 @@ angular.module("meuModulo").controller("indexController", function ($scope) {
     };
 
 
-    $scope.removeProduto = function(){
-        $scope.arrayProdutos.splice({produto: $scope.removeConteudo.produto});
-        
+    $scope.removeProduto = function(produto){
+            for(var i=0, length=produto.length; i < length; i++){
+                if(produto[i].id === produto.id){
+                    produto.splice(i,1);
+                }
+            }
     }
-
+      
 });
 
 document.addEventListener('DOMContentLoaded', function() {

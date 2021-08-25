@@ -1,0 +1,10 @@
+{
+    "produtos":  [
+      { "id":  1, "produto": "Notebook", "descricao": "DellBrasil", "valor": "R$ 3.197,00"},
+      { "id": 2, "produto": "Cabo de Enthernet", "descricao": "Amazon", "valor": "R$ 220,00"},
+      { "id": 3, "produto": "Mouse", "descricao": "logitech", "valor": "R$ 140,00" },
+      { "id": 4, "produto": "Celular Xiaomi", "descricao": "Amazon", "valor": "R$ 987,00"}
+
+    ]
+   
+  }
