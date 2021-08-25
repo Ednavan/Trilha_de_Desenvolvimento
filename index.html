@@ -71,12 +71,13 @@
                <div class="card-body">
                     <p>{{lista.produto}}</p> 
                     <p>{{lista.descricao}}</p> 
-                    <p>{{lista.valor}}</p> <a href="" ng-click="removeProduto($index)"><i class="material-icons">delete</i></a> 
+                    <p>{{lista.valor}}</p> <a class="waves-effect waves-light btn modal-trigger" href="#modal2" ng-click="removeProduto($index)"><i class="material-icons ">delete</i></a> 
                </div>
            </div>
        </div>
     
        <a class="waves-effect waves-light btn modal-trigger" href="#modal1" >Adicionar</a>
+      
 
  
        
@@ -103,7 +104,7 @@
         </div>
 
 
-      <!--
+      
         <div id="modal2" class="modal">
             <div class="modal-content">
               <h4>edite seus produtos</h4>
@@ -118,7 +119,7 @@
             </div>
           </div>
         </div>
-    -->
+   
    
     </main>
 
