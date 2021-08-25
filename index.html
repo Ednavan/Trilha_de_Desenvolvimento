@@ -71,7 +71,7 @@
                <div class="card-body">
                     <p>{{lista.produto}}</p> 
                     <p>{{lista.descricao}}</p> 
-                    <p>{{lista.valor}}</p> <a class="waves-effect waves-light btn modal-trigger" href="#modal2" ng-click="removeProduto($index)"><i class="material-icons ">delete</i></a> 
+                    <p>{{lista.valor}}</p> <a class="waves-effect waves-light btn modal-trigger" href="#modal2" ><i class="material-icons ">delete</i></a> 
                </div>
            </div>
        </div>
@@ -107,13 +107,15 @@
       
         <div id="modal2" class="modal">
             <div class="modal-content">
-              <h4>Qual o produto deseja remover</h4>
+              <h4>Qual o produto deseja remover?</h4>
               <div class="row">
+                <div class="col col-sm-12">
                 <form class="form-inline" name="formItem">
                     <input type="text" placeholder="Insira o produto que deseja remover" ng-model="removeProduto.arrayProdutos">
-                    <button>Remover</button>
+                    <button ng-click="removeProduto($index)">Remover</button>
                 </form>
               </div>
+            </div>
             <div class="modal-footer">
               <a href="#!" class="modal-close waves-effect waves-green btn-flat">Fechar</a>
             </div>
