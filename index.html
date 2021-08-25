@@ -91,7 +91,7 @@
                 <input type="text" placeholder="Produto" ng-model="conteudo.produto">
                 <input type="text" placeholder="Descrição" ng-model="conteudo.descricao">
                 <input type="text" placeholder="valor" ng-model="conteudo.valor">
-                <button ng-click="adicionaProduto()">Adicionar Produto</button>
+               
             </form>
               </div>
           </div>
@@ -99,7 +99,7 @@
         </div>
 
         <div class="modal-footer">
-            <a href="#!" class="modal-close waves-effect waves-green btn-flat">Fechar</a> <!--basicimanete com a funçao de fechar o meu modal-->
+            <button class="waves-effect waves-light btn modal-trigger" ng-click="adicionaProduto()">Adicionar Produto</button>
           </div>
         </div>
 
