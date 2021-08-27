@@ -67,11 +67,11 @@
        </div>
 
        <div class="row container highlight-seeds">
-           <div class="card" style="width: 18rem" ng-repeat="lista in arrayProdutos | filter:busca">
+           <div class="card" style="width: 18rem" ng-repeat="produto in arrayProdutos | filter:busca">
                <div class="card-body">
-                    <p>{{lista.produto}}</p> 
-                    <p>{{lista.descricao}}</p> 
-                    <p>{{lista.valor}}</p>    <a class="waves-effect waves-light btn modal-trigger" href="#modal2" ><i class="material-icons ">delete</i></a>
+                    <p>{{produto.Myproduto}}</p> 
+                    <p>{{produto.descricao}}</p> 
+                    <p>{{produto.valor}}</p>    <a class="waves-effect waves-light btn modal-trigger"  ng-click="removeProduto(produto)" ><i class="material-icons ">delete</i></a>
                </div>
               
            </div>
@@ -113,7 +113,7 @@
                 <div class="col col-sm-12">
                 <form class="form-inline" name="formItem">
                     <input type="text" placeholder="Insira o produto que deseja remover" ng-model="removeProduto.arrayProdutos">
-                    <button ng-click="removeProduto($index)">Remover</button>
+                    <button>Remover</button>
                 </form>
               </div>
             </div>

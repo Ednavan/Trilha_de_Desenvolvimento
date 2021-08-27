@@ -1,11 +1,11 @@
 angular.module("meuModulo").controller("indexController", function ($scope) {
     $scope.titulo = "FILTRO";
-    $scope.arrayProdutos = [
+    var arrayProdutos = [
 
-        { id:1, produto: "Notebook", descricao: "DellBrasil", valor: "R$ 3.197,00",  }, /*com o img, quero armazenar imagem*/
-        { id:2, produto: "Cabo de Enthernet", descricao: "Amazon", valor: "R$ 220,00" },
-        { id:3, produto: "Mouse", descricao: "logitech", valor: "R$ 140,00" },
-        { id:4, produto: "Celular Xiaomi", descricao: "Amazon", valor: "R$ 987,00" },
+        { id:1, Myproduto: "Notebook", descricao: "DellBrasil", valor: "R$ 3.197,00",  }, /*com o img, quero armazenar imagem*/
+        { id:2, Myproduto: "Cabo de Enthernet", descricao: "Amazon", valor: "R$ 220,00" },
+        { id:3, Myproduto: "Mouse", descricao: "logitech", valor: "R$ 140,00" },
+        { id:4, Myproduto: "Celular Xiaomi", descricao: "Amazon", valor: "R$ 987,00" },
 
     ];
    
@@ -23,14 +23,17 @@ angular.module("meuModulo").controller("indexController", function ($scope) {
      }
      */
 
-     $scope.removeProduto = function(arrayProdutos){
-         for (var index in $scope.arrayProdutos){
-             var aux = $scope.arrayProdutos[index];
-             if(arrayProdutos = aux){
-                 $scope.arrayProdutos.splice(index, 1);
+     $scope.arrayProdutos = arrayProdutos;
+     $scope.produto = {};
+     
+     $scope.removeProduto = function(produto){
+
+        for(var i=0; length=arrayProdutos.length; i<length, i++){
+                if(arrayProdutos[i].id === produto.id){
+                    arrayProdutos.splice(i, 1);
                 }
             }
-       };
+     };
          
     
       
