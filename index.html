@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
     <script src="app/app.js"></script>
     <script src="app/controllers.js"></script>
     <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-route.min.js"></script>
+    
     <script src="materialize/css/materialize.css"></script>
     <script src="materialize/css/materialize.min.css"></script>
   
@@ -71,14 +74,15 @@
                <div class="card-body">
                     <p>{{produto.Myproduto}}</p> 
                     <p>{{produto.descricao}}</p> 
-                    <p>{{produto.valor}}</p>    <a class="waves-effect waves-light btn modal-trigger"  ng-click="removeProduto(produto)" ><i class="material-icons ">delete</i></a>
+                    <p>{{produto.valor}}</p>    <a class="waves-effect waves-light btn modal-trigger"  ng-click="removeProduto(produto)"><i class="material-icons ">delete</i></a>
+                      <a class="waves-effect waves-light btn modal-trigger" ng-click="editarProduto"><i class="material-icons">create</i></a>
                </div>
               
            </div>
        </div>
 
        <a class="waves-effect waves-light btn modal-trigger" href="#modal1" >Adicionar</a>
-      
+
 
  
        
@@ -112,7 +116,7 @@
               <div class="row">
                 <div class="col col-sm-12">
                 <form class="form-inline" name="formItem">
-                    <input type="text" placeholder="Insira o produto que deseja remover" ng-model="removeProduto.arrayProdutos">
+                    <input type="text" placeholder="Insira o produto que deseja remover">
                     <button>Remover</button>
                 </form>
               </div>

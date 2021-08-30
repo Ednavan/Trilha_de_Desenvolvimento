@@ -15,6 +15,7 @@ angular.module("meuModulo").controller("indexController", function ($scope) {
         
     };
 
+
     
     /*
     $scope.removeProduto = function(index){
@@ -28,13 +29,18 @@ angular.module("meuModulo").controller("indexController", function ($scope) {
      
      $scope.removeProduto = function(produto){
 
-        for(var i=0; length=arrayProdutos.length; i<length, i++){
+        for(var i=0; length=arrayProdutos.length; i <length, i++){
                 if(arrayProdutos[i].id === produto.id){
                     arrayProdutos.splice(i, 1);
+                    break;
                 }
             }
      };
          
+
+     $scope.editarProduto = function(produto){
+        $('#modal1').openModal();
+     }  
     
       
 });
