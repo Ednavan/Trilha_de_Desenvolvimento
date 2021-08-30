@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br" ng-app="meuModulo">
+<html lang="pt-br" ng-app="ok">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -89,7 +89,8 @@
        <div class="switch_container">
        <div id="modal1" class="modal">
         <div class="modal-content">
-          <h4>Preencha os dados do produto</h4>
+          <h4 ng-if="editando">Preencha os dados do produto</h4>
+          <h4></h4>
           <div class="row"> 
               <div class="input-field col s6"  > <!--(s12)para sistema mobile quando tem com a sigla s, já (m) para desktop-->
             <form class="form-inline" name="formItem">
