@@ -91,24 +91,62 @@ input:checked[type="checkbox"]::before{
 input[type=text]{
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
-     border-radius: 20px;
+    border-radius: 20px;
      border: 1px solid black;
      color: black;
      width: 1150px;
-     height: 30px;
+     height: 300px;
      padding-left: 10px;
      margin-top: 2px;
+     
+     display: inline-block;
+     content: '';
+     vertical-align: -.125em;
+    
+     padding-left:40px ;
+     
     }
+
+
     
 input[type=text]:focus {
      outline: none;
      border: 1px solid black;
      color: black;
+     
 }
 
-#a{
+#titulo-busca{
     width: 1150px;
     
-  
-   
 }
+
+
+
+
+
+
+
+
+
+
+.submit-lente {
+    position: absolute;
+    top:0; right:2;
+    z-index:10;
+    border:none;
+    background:transparent;
+    outline:none;
+    
+     
+  }
+  
+  .submit-line {
+    position: relative;
+    width: 205px;
+  }
+
+  .submit-line input {
+    width: 550%;
+    height: 800%;
+  }
