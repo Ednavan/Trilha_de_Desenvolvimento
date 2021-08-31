@@ -130,6 +130,8 @@ input[type=text]:focus {
 
 
 
+
+
 .submit-lente {
     position: absolute;
     top:0; right:2;
@@ -213,5 +215,13 @@ input[type=text]:focus {
     border: 1px solid black;
     color: black;
   
+    
+}
+
+#editar{
+    position: absolute;
+    background: #fff;
+    border: 1px solid black;
+    color: black;
     
 }
