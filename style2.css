@@ -161,7 +161,7 @@ input[type=text]:focus {
 }
   
 .item{
-      margin: 80px;
+      margin: 50px;
      
       text-align: center;
       font-size: 1.5em;
@@ -193,4 +193,25 @@ input[type=text]:focus {
     margin-top: 70px;    
     display: flex;
     justify-content: center;
+}
+
+#dropdownMenuLink{ /*filtro*/
+    position: absolute;
+    margin-left: 220px;
+    margin-top: 25px;
+    background: #fff;
+    color:black;
+
+}
+
+
+#Adicionando{
+    position: absolute;
+    margin-left: 975px;
+    margin-top: 25px;
+    background: #fff;
+    border: 1px solid black;
+    color: black;
+  
+    
 }

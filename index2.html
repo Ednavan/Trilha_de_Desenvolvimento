@@ -54,11 +54,13 @@
 -->
 
     <nav id="nav2">
-        <div class="switch-menu-container">
-            <input type="checkbox">
+        <div class="switch-menu-container"class="collapse" >
+            <input type="checkbox"  data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+
         </div>
     </nav>
 
+   
 
 
     <main>
@@ -66,7 +68,7 @@
             
             <h6>O que você está procurando?</h6>
         </div>
-        
+
         <div class="container">
               <div class="submit-line">
                 <input type="text" />
@@ -78,18 +80,40 @@
         </div>
 
 
-        <div id="myfiltro">
 
-        </div>
+
+        <div class="collapse" id="collapseExample">
+  
+            <button id="Adicionando" class="btn btn-primary me-md-2" type="button">Adicionar Produto</button>
+      
+         </div>
+
+
+
+
+        <section id="filtro">
+            
+            <div class="dropdown">
+              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                Filtro
+              </a>
+            
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+              </ul>
+            </div>
+        </section>
+
+       
 
         
         <div>
-            
             <section class="container grid grid-template-columns">
-                <div class="item"><p>produto nr1</p> <p>Descricao</p> <p>R$ xxxx</p></div>
-                <div class="item"><p>produto nr2</p> <p>Descrição</p> <p>R$ xxxx</p></div>
-                <div class="item"><p>Produto nr3</p> <p>Descricao</p> <p>R$ xxxx</p></div>
-
+                <div class="item" class="card" style="width: 18rem;"><img src="..." class="card-img-top"><p>produto nr1</p> <p>Descricao</p> <p>R$ xxxx</p></div>
+                <div class="item" class="card" style="width: 18rem;"><img src="..." class="card-img-top"><p>produto nr2</p> <p>Descrição</p> <p>R$ xxxx</p></div>
+                <div class="item" class="card" style="width: 18rem;"><img src="..." class="card-img-top"><p>Produto nr3</p> <p>Descricao</p> <p>R$ xxxx</p></div>
             </section>
         </div>
 
