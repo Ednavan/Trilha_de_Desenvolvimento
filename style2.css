@@ -86,3 +86,11 @@ input:checked[type="checkbox"]::before{
     left: 29px;
     
 }
+
+
+input[type=text]{
+   width: 100%;
+   padding: 12px 20px;
+   margin-top: 50px;
+   border-radius: 50px;
+}
