@@ -89,8 +89,19 @@ input:checked[type="checkbox"]::before{
 
 
 input[type=text]{
-   width: 100%;
-   padding: 12px 20px;
-   margin-top: 50px;
-   border-radius: 50px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+     border-radius: 20px;
+     border: 1px solid black;
+     color: black;
+     width: 1150px;
+     height: 30px;
+     padding-left: 10px;
+     margin-top: 50px;
+    }
+    
+input[type=text]:focus {
+     outline: none;
+     border: 1px solid black;
+     color: black;
 }
