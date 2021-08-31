@@ -167,17 +167,17 @@ input[type=text]:focus {
       font-size: 1.5em;
   }
 
+
+
+
 .pagination{
-   margin-top: 90px;
-   margin-left: 500px;
-   font-size: 20px;
-    
+ 
 
 }
 
 .pagination a{
    border: 1px solid black;
-   font-size: 10px;
+   font-size: 20px;
    
 }
 
@@ -187,4 +187,10 @@ input[type=text]:focus {
 .pagination li > a{
     background-color: white;
     color: black;
+}
+
+.pagination{
+    margin-top: 70px;    
+    display: flex;
+    justify-content: center;
 }
