@@ -225,3 +225,12 @@ input[type=text]:focus {
     color: black;
     
 }
+
+#remover{
+    position: absolute;
+    background: #fff;
+    border: 1px solid black;
+    color: black;
+    margin-left: 49px;
+
+}
