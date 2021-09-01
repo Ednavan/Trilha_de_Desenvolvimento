@@ -67,3 +67,27 @@
     height: 50px;
     color: black;
 }
+
+#exclamacao{
+    text-align: center;
+}
+
+
+/*estilos do modal sim e nao*/
+#modalbuttom{
+    margin-top: 100px;
+}
+
+#modalSim{
+    margin-left: 150px;
+    background: #fff;
+    border: solid 1px black;
+    color: black;
+
+}
+
+#modalNao{
+    background: #fff;
+    border: solid 1px black;
+    color: black;
+}
