@@ -26,3 +26,16 @@
 #inputDescricao{
     border: solid 1px black;
 }
+
+#inputValorProduto{
+    border: solid 1px black;
+}
+
+#inputQtd {
+    border: solid 1px black;
+}
+
+#qtdproduto{
+   margin-left: 500px;
+  
+}
