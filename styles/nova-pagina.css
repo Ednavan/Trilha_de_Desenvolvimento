@@ -40,11 +40,30 @@
   
 }
 
+
+/*formatação que serve para ambos os botões*/
+#bottom-finish{
+    margin-top: 100px;
+    position: absolute;
+}
+
+/*botões de cancelar*/
 #cancelar{
     background: #fff;
-    color: black;
+    border: solid 1px black;
     width: 200px;
     height: 50px;
-    border:  solid 1px black;
-    margin-top: 100px;
+    color: black;
+
+}
+
+
+/*botao de adicionar Produto*/
+#addproduto{
+    margin-left: 590px;
+    background: #fff;
+    border: solid 1px black;
+    width: 200px;
+    height: 50px;
+    color: black;
 }
