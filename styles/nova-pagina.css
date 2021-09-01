@@ -4,5 +4,25 @@
 }
 
 #menuInicial{
+    top: 0;
+    font-size: 25px;
+    border: solid 1px black;
+    text-align: center;
+    padding-top: 2px;
 
+}
+
+#formularioCadastro {
+   margin-top: 100px;
+
+   
+}
+
+#inputProduto{
+    border: solid 1px black;
+    margin-bottom: 50px;
+}
+
+#inputDescricao{
+    border: solid 1px black;
 }
