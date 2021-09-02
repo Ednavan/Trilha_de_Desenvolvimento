@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-br" ng-app="meuModulo">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,21 +7,30 @@
 
     <link rel="stylesheet" href="styles/nova-pagina.css">
 
-    <!--Chamando Angularjs:-->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-    <script src="js/angular.js"></script>
-    <script src="js/controller.js"></script>
-
+  
+    
+    
     <!--Chamando o Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-    
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!--Chamando Angularjs:-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src= "js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.mask.min.js"></script> 
+    <script src="js/angular.js"></script>
+    <script src="js/controller.js"></script>
+    
+   <!-- <script src="javascript.js"></script>-->
+    
+   
 
     <title>Adicionar Produto</title>
 </head>
-<body>
+<body ng-controller="indexController">
+    
     <header>
         <div id="menuInicial">
             <h1>Lojinha Virtual do Só Vamu</h1>
@@ -41,9 +50,10 @@
 
                 <div class="col-md-3" >
                     <label for="inputValorProduto">Valor do Produto:</label>
-                    <input type="text" class="form-control" id="inputValorProduto">
+                    <input  id="inputValorProduto" type="text" name="inputValorProduto"  class="form-control" placeholder="R$ 0,00">            
                 </div>
-
+                
+         
               
                 <div id="qtdproduto" class="col-md-3" >
                     <label for="inputQtd" class="qt" >Quantidade do Produto:</label>
@@ -54,6 +64,8 @@
                 
                 
             </form>
+
+
 
 
             <!--estrutura do modal cancelar-->
