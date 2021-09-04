@@ -4,28 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="styles/nova-pagina.css">
-
-  
     
+    <link rel="stylesheet" href="styles/nova-pagina.css">
     
     <!--Chamando o Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-
+    
     <!--Chamando Angularjs:-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-    <script src= "js/jquery-3.6.0.min.js"></script>
-    <script src="js/jquery.mask.min.js"></script> 
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mask.min.js"></script>
     <script src="js/angular.js"></script>
     <script src="js/controller.js"></script>
     
-   <!-- <script src="javascript.js"></script>-->
-    
-   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
+
+ 
 
     <title>Adicionar Produto</title>
 </head>
@@ -50,9 +47,13 @@
 
                 <div class="col-md-3" >
                     <label for="inputValorProduto">Valor do Produto:</label>
-                    <input  id="inputValorProduto" type="text" name="inputValorProduto"  class="form-control" placeholder="R$ 0,00">            
+              <!-- <input data-prefix="R$" type="text" class="money"   placeholder="R$ 0,00" id="money" name="money" >  -->
+              <input type="text"class="form-control" data-prefix="R$ " id="currency" />
+                
+             
                 </div>
                 
+               
          
               
                 <div id="qtdproduto" class="col-md-3" >
@@ -89,12 +90,35 @@
             </section>
             
 
+            <section>
+         
+                <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div>
+                                    <h6>Produto adiconado com Sucesso!</h6>
+                                    <h6>Deseja cadastrar outro Produto?</h6>
+                                </div>
+                                <div id="modalbuttom" class="row g-3">
+                                    <button id="modalNao" class="btn btn-primary col-md-4">Não</button>
+                                    <button id="modalSim" class="btn btn-primary col-md-4">Sim</button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                
+            </section>
+
 
             <div id="bottom-finish" class="row g-3">
                 
                 <button id="cancelar" class="btn btn btn-primary  me-md-6 col-md-3 " type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" >Cancelar</button>
                 
-                <button id="addproduto" class="btn btn btn-primary  me-md-6 col-md-3 " type="button" >Adicionar Produto</button>
+                <button id="addproduto" class="btn btn btn-primary  me-md-6 col-md-3 " type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2" >Adicionar Produto</button>
             </div>
            
        
