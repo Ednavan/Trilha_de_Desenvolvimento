@@ -18,13 +18,15 @@ $(function() {
   });
 
 
-  jQuery(document).ready(function(e) {
-    jQuery('#mymodal').trigger('click');
+$(document).ready(function(){
+$('#exampleModal2').modal({backdrop: 'static', keyboard: false}) 
+
 });
-  
 
 
-
+$(document).ready(function(){
+$("#exampleModal").modal({backdrop:'static', keyboard:false})
+});
 /*
 $(document).ready(function(){
     $("#inputValorProduto").mask("R$ 0,00")
