@@ -26,7 +26,35 @@ $('#exampleModal2').modal({backdrop: 'static', keyboard: false})
 
 $(document).ready(function(){
 $("#exampleModal").modal({backdrop:'static', keyboard:false})
+
 });
+
+
+
+/*configuração  de campo de validacao caso clique em (sim)*/
+function limpa(){
+    if(document.getElementById('inputProduto').value!=""){
+        document.getElementById('inputProduto').value="", 
+        $("#exampleModal2").modal('hide');
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 $(document).ready(function(){
     $("#inputValorProduto").mask("R$ 0,00")

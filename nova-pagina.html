@@ -40,9 +40,9 @@
             <form class="row g-3 " id="formularioCadastro">
                 <div class="col-12" >
                     <label for="inputProduto" class="form-label">Nome do Produto:</label>
-                    <input type="text" class="form-control" id="inputProduto">
+                    <input type="text" class="form-control" id="inputProduto" name="inputProduto">
                     <label for="inputDescricao" class="form-label">Descrição do Produto:</label>
-                    <input type="text" class="form-control" id="inputDescricao">
+                    <input type="text" class="form-control" id="inputDescricao" name="inputDescricao">
                 </div>
 
                 <div class="col-md-3" >
@@ -91,7 +91,6 @@
             
 
             <section>
-         
                 <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
@@ -102,15 +101,12 @@
                                 </div>
                                 <div id="modalbuttom" class="row g-3">
                                     <button id="modalNao" class="btn btn-primary col-md-4">Não</button>
-                                    <button id="modalSim" class="btn btn-primary col-md-4">Sim</button>
+                                    <button id="modalSim" class="btn btn-primary col-md-4" onclick="limpa()">Sim</button>
                                 </div>
                             </div>
-
                         </div>
-
                     </div>
-                </div>
-                
+                </div>   
             </section>
 
 
