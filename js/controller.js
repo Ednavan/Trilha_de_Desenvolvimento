@@ -14,7 +14,7 @@ $(document).ready(function(){
 */
 
 $(function() {
-    $('#currency').maskMoney();
+    $('#money').maskMoney();
   });
 
 
@@ -34,7 +34,10 @@ $("#exampleModal").modal({backdrop:'static', keyboard:false})
 /*configuração  de campo de validacao caso clique em (sim)*/
 function limpa(){
     if(document.getElementById('inputProduto').value!=""){
-        document.getElementById('inputProduto').value="", 
+        document.getElementById('inputProduto').value="",
+        document.getElementById('inputDescricao').value="",
+        document.getElementById('money').value="",
+        document.getElementById('inputQtd').value="",
         $("#exampleModal2").modal('hide');
     }
 }
