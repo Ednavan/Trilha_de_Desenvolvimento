@@ -26,7 +26,9 @@
 
     <title>Adicionar Produto</title>
 </head>
-<body ng-controller="indexController">
+<body ng-controller="indexController as ctrl">
+    
+   
     
     <header>
         <div id="menuInicial">
@@ -40,7 +42,7 @@
             <form class="row g-3 " id="formularioCadastro">
                 <div class="col-12" >
                     <label for="inputProduto" class="form-label">Nome do Produto:</label>
-                    <input type="text" class="form-control" id="inputProduto" name="inputProduto">
+                    <input type="text" class="form-control" id="inputProduto" name="inputProduto"  onsubmit="formu()">
                     <label for="inputDescricao" class="form-label">Descrição do Produto:</label>
                     <input type="text" class="form-control" id="inputDescricao" name="inputDescricao">
                 </div>
@@ -82,6 +84,7 @@
                                 <div id="modalbuttom" class="row g-3">
                                     <button id="modalNao" href="index2.html" class="btn btn-primary col-md-4">Não</button>
                                     <button id="modalSim" class="btn btn-primary col-md-4">Sim</button>
+                                   
                                 </div>
                             </div>
                         </div>
@@ -103,7 +106,7 @@
                                 <div id="modalbuttom" class="row g-3">
                                     
                                     <button id="modalNao" class="btn btn-primary col-md-4" onclick="location.href=document.referrer">Não</button>
-                                    <button id="modalSim" class="btn btn-primary col-md-4" onclick="limpa()">Sim</button>
+                                    <button id="modalSim" class="btn btn-primary col-md-4"  ng-click="ctrl.enviar()" onclick="limpa()">Sim</button>
                                 </div>
                             </div>
                         </div>
@@ -118,7 +121,7 @@
                 
                 <button id="cancelar" class="btn btn btn-primary  me-md-6 col-md-3 " type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-backdrop="static" data-keyboard="false" >Cancelar</button>
                 
-                <button id="addproduto" class="btn btn btn-primary  me-md-6 col-md-3 " type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-backdrop="static" data-keyboard="false">Adicionar Produto</button>
+                <button id="addproduto" class="btn btn btn-primary  me-md-6 col-md-3 " type="button" data-bs-toggle="modal" data-bs-target="#exampleModal2" data-backdrop="static" data-keyboard="false" >Adicionar Produto</button>
             </div>
            
        

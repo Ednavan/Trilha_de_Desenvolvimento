@@ -1,10 +1,28 @@
-angular.module("meuModulo").controller("indexController", function ($scope) {
-    $scope.titulo = "FILTRO";
+angular.module("meuModulo").controller("indexController", function ($scope, $http) {
 
-    var arrProduto= [];
+    $http.get('http://localhost:3000/arrayProdutos').then((res)=>{
 
+    $scope.arrayProduto = res.data.result;
+    })
+this.enviar = function() {
+fetch('http://localhost:3000/arrayProdutos',{
+    method: 'post',
+    headers: {
+        'Content-Type':
+        'application/json'
+    },
+    body:JSON.stringify({
+        nome: '',
+        preco: 42
+    }),
+  
+})
+    
 
+}
 });
+
+
 
  /*
 $(document).ready(function(){
@@ -43,7 +61,13 @@ function limpa(){
 }
 
 
-=
+function formu(){
+    if(document.dados.text.inputProduto){
+        document.dados.text.inputProduto.focus();
+        alert("preencha campo nome corretamente!");
+        return false;
+    }
+}
 
 
 

@@ -7,28 +7,19 @@
       "valor": "R$ 3.197,00"
     },
     {
-      "id": 2,
-      "Myproduto": "Cabo de Enthernet",
-      "descricao": "Amazon",
-      "valor": "R$ 220,00"
+      "nome": "",
+      "preco": 42,
+      "id": 2
     },
     {
-      "id": 3,
-      "Myproduto": "Mouse",
-      "descricao": "logitech",
-      "valor": "R$ 140,00"
+      "nome": "",
+      "preco": 42,
+      "id": 3
     },
     {
-      "id": 4,
-      "Myproduto": "Celular Xiaomi",
-      "descricao": "Amazon",
-      "valor": "R$ 987,00"
-    },
-    {
-      "id": 5,
-      "Myproduto": "capa",
-      "descricao": "Loja",
-      "valor": "R$ 6"
+      "nome": "",
+      "preco": 42,
+      "id": 4
     }
   ]
 }
