@@ -30,7 +30,6 @@
 </head>
 <body ng-controller="indexController">
     
-
     
 
     <header>
@@ -120,6 +119,7 @@
                 <div class="item" class="card" style="width: 18rem;">
                     <img src="..." class="card-img-top">
                     <div class="collapse" id="collapseExample">
+                        
                     <button id="editar" class="btn btn-primary me-md-2" type="button">
                     <i class="bi bi-pencil"></i>
                     </button>
@@ -135,9 +135,17 @@
                     
                 
                     </br> <!--Espaçamento entre a imgem e o nome produto-->
-                    <div ng-repeat="p in arrayProduto">
-                        <li>{{p.nome}}</li>
+                
+                    <div>
+                        <tr ng-repeat="p in arrayProduto">
+                             {{p.nome}}
+                             <td>{{p.descricao}}</td>
+                             <td>{{p.valor}}</td>
+                         </tr>
+                         
+                        
                     </div>
+   
 
                 </section>
                 </div>

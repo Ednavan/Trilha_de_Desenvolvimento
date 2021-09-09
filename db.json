@@ -1,11 +1,15 @@
 {
-  "arrayProdutos": [
+  "arrayProduto": [
     {
       "id": 1,
-      "Myproduto": "Notebook",
+      "nome": "Notebook",
       "descricao": "DellBrasil",
       "valor": "R$ 3.197,00"
+    },
+    {
+      "nome": "",
+      "preco": 42,
+      "id": 2
     }
-    
   ]
 }

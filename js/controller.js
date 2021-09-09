@@ -1,12 +1,12 @@
 angular.module("meuModulo").controller("indexController", function ($scope, $http) {
 
-    $http.get('http://localhost:3000/arrayProdutos').
+    $http.get('http://localhost:3000/arrayProduto').
     then(function(res){
     (console.log(res))
     $scope.arrayProduto = res.data.db;
     });
 this.enviar = function() {
-fetch('http://localhost:3000/arrayProdutos',{
+fetch('http://localhost:3000/arrayProduto',{
     method: 'post',
     headers: {
         'Content-Type':
