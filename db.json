@@ -5,21 +5,7 @@
       "Myproduto": "Notebook",
       "descricao": "DellBrasil",
       "valor": "R$ 3.197,00"
-    },
-    {
-      "nome": "",
-      "preco": 42,
-      "id": 2
-    },
-    {
-      "nome": "",
-      "preco": 42,
-      "id": 3
-    },
-    {
-      "nome": "",
-      "preco": 42,
-      "id": 4
     }
+    
   ]
 }

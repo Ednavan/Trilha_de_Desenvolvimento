@@ -135,7 +135,9 @@
                     
                 
                     </br> <!--Espaçamento entre a imgem e o nome produto-->
-                    <p>produto nr1</p> <p>Descricao</p> <p>R$ xxxx</p>
+                    <div ng-repeat="p in arrayProduto">
+                        <li>{{p.nome}}</li>
+                    </div>
 
                 </section>
                 </div>
