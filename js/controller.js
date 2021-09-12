@@ -1,26 +1,46 @@
 angular.module("meuModulo").controller("indexController", function ($scope, $http) {
 
+    $scope.data={};
+    $scope.submit=function(){
+        console.log('clicked sumit');
+        $http({
+            url:'http://localhost:3000/arrayProduto',
+            method: 'POST',
+            data: $scope.data
+        }).then(function (httpResponse){
+            console.log('response:', httpResponse);
+        })
+    }
+
+
+
+    
     $http.get('http://localhost:3000/arrayProduto').
     then(function(res){
     (console.log(res))
-    $scope.arrayProduto = res.data.db;
+    $scope.arrayProduto = res.data;
     });
-this.enviar = function() {
-fetch('http://localhost:3000/arrayProduto',{
-    method: 'post',
-    headers: {
-        'Content-Type':
-        'application/json'
-    },
-    body:JSON.stringify({
-        nome: '',
-        preco: 42
-    }),
-  
-})
     
+    /*
+    $http.post({
+        method: 'POST',
+        url: 'http://localhost:3000/arrayProduto',
+        data: $.param({
+            nome: $scope('#inputProduto'),
 
-}
+        }
+        )
+      })
+      .then(function (success) {
+        callback(success);
+      }, function (error) {
+        errorCallback(error.data);
+      });
+      */
+
+
+
+
 });
 
 
@@ -31,6 +51,8 @@ $(document).ready(function(){
 
 });
 */
+
+
 
 $(function() {
     $('#money').maskMoney();

@@ -7,9 +7,15 @@
       "valor": "R$ 3.197,00"
     },
     {
-      "nome": "",
-      "preco": 42,
+      "nome": "a",
+      "descricao": "a",
       "id": 2
+    },
+    {
+      "nome": "cafe",
+      "descricao": "mesclado",
+      "quantidade": "2",
+      "id": 3
     }
   ]
 }
