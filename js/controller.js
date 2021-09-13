@@ -1,5 +1,5 @@
 angular.module("meuModulo").controller("indexController", function ($scope, $http) {
-
+    
     $scope.data={};
     $scope.submit=function(){
         console.log('clicked sumit');
@@ -12,8 +12,6 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
         })
     }
 
-
-
     
     $http.get('http://localhost:3000/arrayProduto').
     then(function(res){
@@ -21,22 +19,6 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
     $scope.arrayProduto = res.data;
     });
     
-    /*
-    $http.post({
-        method: 'POST',
-        url: 'http://localhost:3000/arrayProduto',
-        data: $.param({
-            nome: $scope('#inputProduto'),
-
-        }
-        )
-      })
-      .then(function (success) {
-        callback(success);
-      }, function (error) {
-        errorCallback(error.data);
-      });
-      */
 
 
 

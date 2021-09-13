@@ -115,7 +115,7 @@
        
 
         
-        <div>
+        <div class="container-fluid grid">
             <section class="container grid grid-template-columns"  >
                 <div class="item" class="card" style="width: 18rem;">
                     <img src="..." class="card-img-top">
@@ -137,11 +137,11 @@
                 
                     </br> <!--Espaçamento entre a imgem e o nome produto-->
                 
-                    <div ng-repeat="pegando in arrayProduto">
-                        <td>{{pegando.nome}}</td> </br>
-                        <td>{{pegando.descricao}}</td> </br>
-                        <td>{{pegando.valor}}</td>
-                    </div>
+                    <div ng-repeat="a in arrayProduto">
+                        <div  ng-if="$index == 0 ">
+                        <td>{{a.nome}}</td> </br>
+                        <td>{{a.descricao}}</td> </br>
+                        <td>{{a.valor}}</td>
                        
                 
 
@@ -161,11 +161,17 @@
                      </div>
                     </div>
 
-                <section>
+                <section ng-model="data.nome">
                     <div>
                      </br><!--Espaçamento entre a imgem e o nome produto-->
 
-                    <p>produto nr2</p> <p>Descrição</p> <p>R$ xxxx</p>
+                     <div ng-repeat="a in arrayProduto">
+                        <div class="clearfix" ng-if="$index == 1">
+                        <td>{{a.nome}}</td> </br>
+                        <td>{{a.descricao}}</td> </br>
+                        <td>{{a.valor}}</td>
+                    </div>
+                    </div>
                     </div>
                 </section>
                 
@@ -183,7 +189,11 @@
 
                 <section>
                     </br> <!--Espaçamento entre a imgem e o nome produto-->
-                    <p>Produto nr3</p> <p>Descricao</p> <p>R$ xxxx</p>
+                    <div ng-repeat="a in arrayProduto">
+                        <div class="clearfix" ng-if="$index == 2 ">
+                        <td>{{a.nome}}</td> </br>
+                        <td>{{a.descricao}}</td> </br>
+                        <td>{{a.valor}}</td>
                 </section>
                 
                 
