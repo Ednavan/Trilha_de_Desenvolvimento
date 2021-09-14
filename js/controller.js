@@ -41,7 +41,9 @@ $(document).ready(function(){
 
 function exibeAlert(){
   
-        if( $("#inputProduto").val() == null || $("#inputProduto").val()  == ""){
+        if( $("#inputProduto").val() == null || $("#inputProduto").val()  == "" || $("#inputDescricao").val() == null || $("#inputDescricao").val()  == "" ||   $("#inputQtd").val() == null || $("#inputQtd").val()  == "" || $("#money").val() == null || $("#money").val()  == ""){
+
+        
          console.log("dados faltando para serem preenchidos");
         $('#exampleModal3').modal('toggle')
         }else{
@@ -61,18 +63,26 @@ $(function() {
     $('#money').maskMoney();
   });
 
-
+/*bloqueia modal quando clica fora da página */
 $(document).ready(function(){
 $('#exampleModal2').modal({backdrop: 'static', keyboard: false}) 
 
 });
 
-
+/*bloqueia modal quando clica fora da página */
 $(document).ready(function(){
 $("#exampleModal").modal({backdrop:'static', keyboard:false})
 
 });
 
+
+/*bloqueia modal quando clica fora da página */
+$(document).ready(function(){
+    $('#exampleModal3').modal({backdrop: 'static', keyboard: false}) 
+    
+    });
+
+    
 
 
 /*configuração  de campo de validacao caso clique em (sim)*/
@@ -87,13 +97,14 @@ function limpa(){
 }
 
 
-function formu(){
-    if(document.dados.text.inputProduto){
-        document.dados.text.inputProduto.focus();
-        alert("preencha campo nome corretamente!");
-        return false;
-    }
+function preserv(){
+  
+        $("#exampleModal3").modal('hide');
+    
 }
+
+
+
 
 
 

@@ -50,7 +50,7 @@
                 <div class="col-md-3" >
                     <label for="inputValorProduto">Valor do Produto:</label>
               <!-- <input data-prefix="R$" type="text" class="money"   placeholder="R$ 0,00" id="money" name="money" >  -->
-                 <input type="text"class="form-control" data-prefix="R$" ng-model="data.valor" placeholder="R$ 0,00" id="money" name="money" />
+                 <input  id="money" type="text" class="form-control" data-prefix="R$" ng-model="data.valor" placeholder="R$ 0,00" name="money" />
                 
              
                 </div>
@@ -140,7 +140,9 @@
                                 <div id="modalbuttom" class="row g-3">
                                     
                                    <button id="modalNao" class="btn btn-primary col-md-4" onclick="location.href=document.referrer">Não</button>
-                                    <button  id="modalSim" class="btn btn-primary col-md-4"  onclick="limpa()" ><input type="submit" value="submit" ng-click="submit()">SIM</button> 
+                                    <button  id="modalSim" class="btn btn-primary col-md-4">SIM</button>
+
+                                    <button  id="modalSim" class="btn btn-primary col-md-4"  onclick="preserv()" onclick="location.href=document">test</button>
                                 </div>
                             </div>
                         </div>
