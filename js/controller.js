@@ -20,9 +20,11 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
     });
     
 
+   
+    
+        
 
-
-
+   
 });
 
 
@@ -33,6 +35,23 @@ $(document).ready(function(){
 
 });
 */
+
+
+
+
+function exibeAlert(){
+    /* alert("Agora você já sabe\ncomo pular linha\nnos métodos: \nalert, confirm e prompt!");  */
+        if( $("#inputProduto").val() == null || $("#inputProduto").val()  == ""){
+         console.log("dados faltando");
+         alert("Preencha");
+        }else{
+
+            alert("foeito com sucesso")
+        }
+    
+}
+
+
 
 
 

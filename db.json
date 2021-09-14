@@ -5,18 +5,6 @@
       "descricao": "Nestle",
       "quantidade": "1",
       "id": 1
-    },
-    {
-      "nome": "Internet",
-      "descricao": "velox",
-      "quantidade": "1",
-      "id": 2
-    },
-    {
-      "nome": "Carderno",
-      "descricao": "20 matéria",
-      "quantidade": "1",
-      "id": 3
     }
   ]
 }
