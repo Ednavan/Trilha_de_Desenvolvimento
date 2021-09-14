@@ -43,13 +43,15 @@ function exibeAlert(){
     /* alert("Agora você já sabe\ncomo pular linha\nnos métodos: \nalert, confirm e prompt!");  */
         if( $("#inputProduto").val() == null || $("#inputProduto").val()  == ""){
          console.log("dados faltando");
-         alert("Preencha");
+        $('#exampleModal3').modal('toggle')
         }else{
-
-            alert("foeito com sucesso")
+          
+            $('#exampleModal2').modal('toggle');
+            
         }
     
 }
+
 
 
 
