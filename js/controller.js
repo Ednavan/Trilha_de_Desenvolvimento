@@ -1,15 +1,25 @@
 angular.module("meuModulo").controller("indexController", function ($scope, $http) {
     
     $scope.data={};
+ 
     $scope.submit=function(){
+
         console.log('clicked sumit');
         $http({
             url:'http://localhost:3000/arrayProduto',
             method: 'POST',
             data: $scope.data
         }).then(function (httpResponse){
-            console.log('response:', httpResponse);
-        })
+            $('#exampleModal2').modal('toggle');
+            console.log('response:', httpResponse); 
+            
+          
+        }).catch(function(){
+      
+            $('#exampleModal3').modal('toggle')
+           
+           }
+       )
     }
 
     
@@ -17,15 +27,24 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
     then(function(res){
     (console.log(res))
     $scope.arrayProduto = res.data;
-    });
+   
+    })
     
 
-   
+//    exibeAlert=function(){
+        // if( $scope.data == 200){
+        //     $('#exampleModal2').modal('toggle');
+        // }else{
+          
+            
+        // }
+        // }
     
+    }
         
 
    
-});
+);
 
 
 
@@ -38,9 +57,9 @@ $(document).ready(function(){
 
 
 
-
+/*
 function exibeAlert(){
-  
+        try{
         if( $("#inputProduto").val() == null || $("#inputProduto").val()  == "" || $("#inputDescricao").val() == null || $("#inputDescricao").val()  == "" ||   $("#inputQtd").val() == null || $("#inputQtd").val()  == "" || $("#money").val() == null || $("#money").val()  == ""){
 
         
@@ -51,11 +70,41 @@ function exibeAlert(){
             $('#exampleModal2').modal('toggle');
             
         }
+        
+       
+
+        }catch{
+
+        }
     
 }
 
+*/
+
+/*
+
+function exibeAlert(submit) {
+   if($(submit) === 200 ){
+    $('#exampleModal3').modal('toggle')
+   }else{
+    $('#exampleModal2').modal('toggle');
+   }
+}
+
+*/
 
 
+/*
+function exibeAlert(err){
+        
+    if (err.status == 200) {
+      
+        $('#exampleModal2').modal('toggle');
+    } else {
+        $('#exampleModal3').modal('toggle')
+    }
+}
+*/
 
 
 
