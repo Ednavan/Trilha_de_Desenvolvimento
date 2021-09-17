@@ -1,21 +1,21 @@
 angular.module("meuModulo").controller("indexController", function ($scope, $http) {
     
     $scope.data={};
- 
+    
     $scope.submit=function(){
-
+    
         console.log('clicked sumit');
         $http({
             url:'http://localhost:3000/arrayProduto',
             method: 'POST',
-            data: $scope.data
-        }).then(function (httpResponse){
-            $('#exampleModal2').modal('toggle');
-            console.log('response:', httpResponse); 
+            data: $scope.data,
+       
+        }).then(function (){
             
-          
+            $('#exampleModal2').modal('toggle')
+                        
         }).catch(function(){
-      
+           
             $('#exampleModal3').modal('toggle')
            
            }
@@ -48,6 +48,7 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
 
 
 
+
  /*
 $(document).ready(function(){
    $('input.money').mask('#.##0,00', {reverse: true});
@@ -56,9 +57,9 @@ $(document).ready(function(){
 */
 
 
-
 /*
-function exibeAlert(){
+
+function validafuncao(){
         try{
         if( $("#inputProduto").val() == null || $("#inputProduto").val()  == "" || $("#inputDescricao").val() == null || $("#inputDescricao").val()  == "" ||   $("#inputQtd").val() == null || $("#inputQtd").val()  == "" || $("#money").val() == null || $("#money").val()  == ""){
 
@@ -78,8 +79,8 @@ function exibeAlert(){
         }
     
 }
-
 */
+
 
 /*
 
