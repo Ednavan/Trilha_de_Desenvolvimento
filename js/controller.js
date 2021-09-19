@@ -1,9 +1,12 @@
 angular.module("meuModulo").controller("indexController", function ($scope, $http) {
     
     $scope.data={};
-    
-    $scope.submit=function(){
-    
+
+        
+
+        
+        $scope.submit=function(){
+            if( $("#inputProduto").val() !="" & $('#inputDescricao').val() != "" & $('#mascara').val() != "" &  $('#inputQtd').val() != "" ){
         console.log('clicked sumit');
         $http({
             url:'http://localhost:3000/arrayProduto',
@@ -20,7 +23,9 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
            
            }
        )
-    }
+    }else{
+        alert("Não é possível cadastrar objeto sem conter todas as informações!")
+    }}
 
     
     $http.get('http://localhost:3000/arrayProduto').
@@ -29,20 +34,10 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
     $scope.arrayProduto = res.data;
    
     })
-    
 
-//    exibeAlert=function(){
-        // if( $scope.data == 200){
-        //     $('#exampleModal2').modal('toggle');
-        // }else{
-          
-            
-        // }
-        // }
     
     }
-        
-
+    
    
 );
 
@@ -109,10 +104,6 @@ function exibeAlert(err){
 
 
 
-$(function() {
-    $('#money').maskMoney();
-  });
-
 /*bloqueia modal quando clica fora da página */
 $(document).ready(function(){
 $('#exampleModal2').modal({backdrop: 'static', keyboard: false}) 
@@ -140,7 +131,7 @@ function limpa(){
     if(document.getElementById('inputProduto').value!=""){
         document.getElementById('inputProduto').value="",
         document.getElementById('inputDescricao').value="",
-        document.getElementById('money').value="",
+        document.getElementById('mascara').value="",
         document.getElementById('inputQtd').value="",
         $("#exampleModal2").modal('hide');
     }
@@ -157,10 +148,20 @@ function preserv(){
 
 
 
+/*
+ $(function(){
+    $("#money").maskMoney();
+ });
+*/
 
-
-
-
+ $(function(){
+    $("#mascara").maskMoney({
+       prefix: 'R$ ',
+       allowNegative: true,
+       thousands: '.',
+       decimal: ','
+    });
+ });
 
 
 
