@@ -86,11 +86,12 @@ function limpa(){
 
 
 function preserv(){
-  
-        $("#modalErro").modal('hide');
-    
+    $("#modalErro").modal('hide');
 }
 
+function preservCancelar(){
+    $("#exampleModal").modal('hide');
+}
 
 
 
