@@ -24,7 +24,7 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
            }
        )
     }else{
-        alert("Não é possível cadastrar objeto sem conter todas as informações!")
+        alert("Não é possível cadastrar objetos sem conter todos os dados!")
     }}
 
     
@@ -43,65 +43,12 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
 
 
 
-
  /*
 $(document).ready(function(){
    $('input.money').mask('#.##0,00', {reverse: true});
 
 });
 */
-
-
-/*
-
-function validafuncao(){
-        try{
-        if( $("#inputProduto").val() == null || $("#inputProduto").val()  == "" || $("#inputDescricao").val() == null || $("#inputDescricao").val()  == "" ||   $("#inputQtd").val() == null || $("#inputQtd").val()  == "" || $("#money").val() == null || $("#money").val()  == ""){
-
-        
-         console.log("dados faltando para serem preenchidos");
-        $('#exampleModal3').modal('toggle')
-        }else{
-          
-            $('#exampleModal2').modal('toggle');
-            
-        }
-        
-       
-
-        }catch{
-
-        }
-    
-}
-*/
-
-
-/*
-
-function exibeAlert(submit) {
-   if($(submit) === 200 ){
-    $('#exampleModal3').modal('toggle')
-   }else{
-    $('#exampleModal2').modal('toggle');
-   }
-}
-
-*/
-
-
-/*
-function exibeAlert(err){
-        
-    if (err.status == 200) {
-      
-        $('#exampleModal2').modal('toggle');
-    } else {
-        $('#exampleModal3').modal('toggle')
-    }
-}
-*/
-
 
 
 /*bloqueia modal quando clica fora da página */
@@ -121,7 +68,7 @@ $("#exampleModal").modal({backdrop:'static', keyboard:false})
 $(document).ready(function(){
     $('#exampleModal3').modal({backdrop: 'static', keyboard: false}) 
     
-    });
+});
 
     
 
@@ -177,13 +124,3 @@ $(document).ready(function(){
 
 
 
-/*
-function mascara_valor(){
-    var valor = document.getElementById('inputValorProduto')
-    if(valor.value.length === 1 || valor.value.length == 2 ){
-       valor.value =  valor.value + ","
-    }
-    
-}
-
-*/
