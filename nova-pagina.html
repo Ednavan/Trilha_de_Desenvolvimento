@@ -49,10 +49,8 @@
 
                 <div class="col-md-3" >
                     <label for="inputValorProduto"> Valor do Produto: </label>
-              <!-- <input data-prefix="R$" type="text" class="money"   placeholder="R$ 0,00" id="money" name="money" >  -->
-                <!-- <input  name="money "type="text" class="form-control" data-prefix="R$"  ng-model="data.valor" id="money"   placeholder="R$ 0,00"  />-->
-                
-                 <input type="text" class="form-control" ng-model="data.valor" id="mascara" name="inputValorProduto">
+               
+                    <input type="text" maxlength="9"  class="form-control" id="valor" ng-model="data.valor" onkeyup="formatarMoeda()">
              
                 </div>
                 

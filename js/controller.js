@@ -6,7 +6,7 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
 
         
         $scope.submit=function(){
-            if( $("#inputProduto").val() !="" & $('#inputDescricao').val() != "" & $('#mascara').val() != "" &  $('#inputQtd').val() != "" ){
+            if( $("#inputProduto").val() !="" & $('#inputDescricao').val() != "" & $('#valor').val() != "" &  $('#inputQtd').val() != "" ){
         console.log('clicked sumit');
         $http({
             url:'http://localhost:3000/arrayProduto',
@@ -78,7 +78,7 @@ function limpa(){
     if(document.getElementById('inputProduto').value!=""){
         document.getElementById('inputProduto').value="",
         document.getElementById('inputDescricao').value="",
-        document.getElementById('mascara').value="",
+        document.getElementById('valor').value="",
         document.getElementById('inputQtd').value="",
         $("#exampleModal2").modal('hide');
     }
@@ -101,6 +101,7 @@ function preserv(){
  });
 */
 
+
  $(function(){
     $("#mascara").maskMoney({
        prefix: 'R$ ',
@@ -111,7 +112,22 @@ function preserv(){
  });
 
 
+function formatarMoeda(){
+    var elemento = document.getElementById('valor');
+    var valor = elemento.value;
 
+    valor = valor + '';
+    valor = parseInt(valor.replace(/[\D]+/g, ''));
+    valor = valor + '';
+    valor = valor.replace( /([0-9]{2})$/g, ",$1");
+
+    if(valor.length > 6){
+        valor = valor.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
+
+    }
+    elemento.value = valor;
+    if(valor == 'NaN') elemento.value = '';
+}
 
 
 
