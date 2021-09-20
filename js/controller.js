@@ -15,11 +15,11 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
        
         }).then(function (){
             
-            $('#exampleModal2').modal('toggle')
+            $('#modalAdiciona').modal('toggle')
                         
         }).catch(function(){
            
-            $('#exampleModal3').modal('toggle')
+            $('#modalErro').modal('toggle')
            
            }
        )
@@ -53,7 +53,7 @@ $(document).ready(function(){
 
 /*bloqueia modal quando clica fora da página */
 $(document).ready(function(){
-$('#exampleModal2').modal({backdrop: 'static', keyboard: false}) 
+$('#modalAdiciona').modal({backdrop: 'static', keyboard: false}) 
 
 });
 
@@ -66,7 +66,7 @@ $("#exampleModal").modal({backdrop:'static', keyboard:false})
 
 /*bloqueia modal quando clica fora da página */
 $(document).ready(function(){
-    $('#exampleModal3').modal({backdrop: 'static', keyboard: false}) 
+    $('#modalErro').modal({backdrop: 'static', keyboard: false}) 
     
 });
 
@@ -80,14 +80,14 @@ function limpa(){
         document.getElementById('inputDescricao').value="",
         document.getElementById('valor').value="",
         document.getElementById('inputQtd').value="",
-        $("#exampleModal2").modal('hide');
+        $("#modalAdiciona").modal('hide');
     }
 }
 
 
 function preserv(){
   
-        $("#exampleModal3").modal('hide');
+        $("#modalErro").modal('hide');
     
 }
 
