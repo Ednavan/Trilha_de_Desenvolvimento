@@ -240,3 +240,26 @@ input[type=text]:focus {
                       
                         
 }
+
+
+/* estilos dos modais */
+
+#modalEdicaoProduto #infoProduto{
+    width: 50%;
+    height: 5%;
+
+}
+
+#modalEdicaoProduto #infoDescricao{
+    width: 50%;
+    height: 5%;
+}
+
+#modalEdicaoProduto #infoValorProduto{
+    width: 50%;
+    height: 5%;
+}
+#modalEdicaoProduto #infoQtdProduto{
+    width: 50%;
+    height: 5%;
+}
