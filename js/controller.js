@@ -1,11 +1,7 @@
 angular.module("meuModulo").controller("indexController", function ($scope, $http) {
     
     $scope.data={};
-
-        
-
-        
-        $scope.submit=function(){
+           $scope.submit=function(){
             if( $("#inputProduto").val() !="" & $('#inputDescricao').val() != "" & $('#valor').val() != "" &  $('#inputQtd').val() != "" ){
         console.log('clicked sumit');
         $http({
@@ -15,7 +11,14 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
        
         }).then(function (){
             
+            $http.get('http://localhost:3000/arrayProduto').
+            then(function(res){
+            (console.log(res))
+            $scope.arrayProduto = res.data;
+
             $('#modalAdiciona').modal('toggle')
+           
+    })
                         
         }).catch(function(){
            
@@ -35,11 +38,18 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
    
     })
 
-    
+    $scope.add = function(a){
+        
+        $scope.myVar = a;
+        console.log(a)
+    }   
     }
     
    
 );
+
+
+
 
 
 

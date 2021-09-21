@@ -105,15 +105,15 @@
         </section>
 
        
-
+ 
         
-        <div class="container-fluid grid">
+        <div class="container-fluid grid" >
             <section class="container grid grid-template-columns"  >
-                <div class="item" class="card" style="width: 18rem;">
+                <div class="item" class="card" style="width: 18rem;" ng-repeat="a in arrayProduto">
                     <img src="..." class="card-img-top">
                     <div class="collapse" id="collapseExample">
                         
-                        <button id="editar" class="btn btn-primary me-md-2"data-bs-toggle="modal" data-bs-target="#modalEdicaoProduto" data-backdrop="static" data-keyboard="false" type="button">
+                        <button id="editar" class="btn btn-primary me-md-2"data-bs-toggle="modal" ng-click="add(a)"  data-bs-target="#modalEdicaoProduto" data-backdrop="static" data-keyboard="false" type="button">
                     <i class="bi bi-pencil"></i>
                     </button>
 
@@ -126,88 +126,38 @@
 
                 <section>  
                     </br> <!--Espaçamento entre a imgem e o nome produto-->
-                
-                    <div ng-repeat="a in arrayProduto">
-                        <div  ng-if="$index == 0 ">
+
                        
                         <td>{{a.nome}}</td> </br>
                         <td>{{a.descricao}}</td> </br>
                         <td>{{a.valor}}</td>
+                 
                 </section>
 
-                </div>
-
-                <div class="item" class="card" style="width: 18rem;">
-                    <img src="..." class="card-img-top">
-                    <div class="collapse" id="collapseExample">
-                        <button id="editar" class="btn btn-primary me-md-2"data-bs-toggle="modal" data-bs-target="#modalEdicaoProduto" data-backdrop="static" data-keyboard="false" type="button">
-                        <i class="bi bi-pencil"></i>
-                    </button>
-
-                    <div class="collapse" id="collapseExample">
-                        <button id="remover" class="btn btn-primary me-md-2" type="button">
-                            <i class="bi bi-trash"></i>
-                        </button>
-                     </div>
-                    </div>
-
-                <section ng-model="data.nome">
-                    <div>
-                     </br><!--Espaçamento entre a imgem e o nome produto-->
-
-                     <div ng-repeat="a in arrayProduto">
-                        <div class="clearfix" ng-if="$index == 1">
-                        <td>{{a.nome}}</td> </br>
-                        <td>{{a.descricao}}</td> </br>
-                        <td>{{a.valor}}</td>
-                    </div>
-                    </div>
-                    </div>
-                </section>
-                
-                </div>
-                <div class="item" class="card" style="width: 18rem;"><img src="..." class="card-img-top"><div class="collapse" id="collapseExample">
-                    <button id="editar" class="btn btn-primary me-md-2"data-bs-toggle="modal" data-bs-target="#modalEdicaoProduto" data-backdrop="static" data-keyboard="false" type="button">
-                        <i class="bi bi-pencil"></i>
-                    </button>
-                    <div class="collapse" id="collapseExample">
-                        <button id="remover" class="btn btn-primary me-md-2" type="button">
-                            <i class="bi bi-trash"></i>
-                        </button>
-                     </div>
-                    </div>  
-
-                <section>
-                    </br> <!--Espaçamento entre a imgem e o nome produto-->
-                    <div ng-repeat="a in arrayProduto">
-                        <div class="clearfix" ng-if="$index == 2 ">
-                        <td>{{a.nome}}</td> </br>
-                        <td>{{a.descricao}}</td> </br>
-                        <td>{{a.valor}}</td>
-                </section>
-                
-                
-
+                </div>   
                 </div>
             </section>
+            
         </div>
 
 
-        <section> 
-            <div class="modal fade" id="modalEdicaoProduto" tabindex="-1" aria-labelledby="modalEdicaoProduto" aria-hidden="true">
+        <form> 
+            <div class="modal fade" id="modalEdicaoProduto" tabindex="-1"  aria-labelledby="modalEdicaoProduto" aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
+                    <div class="modal-content" >
                         <div class="modal-body">
-                            <div>
+                            <div >
+                            <form >
                                 <h6>Edição do produto: "NOME DO PRODUTO"</h6>
                                 <label>Nome do produto:</label>
-                                <input type="text" name="" id="infoProduto">
+                                <input type="text" name="" id="infoProduto" ng-value="myVar.nome">
                                 <label>Descrição do produto:</label>
-                                <input type="text" name="" id="infoDescricao">
+                                <input type="text" name="" id="infoDescricao" ng-value="myVar.descricao" >
                                 <label>Valor do Produto:</label>
-                                <input type="text" name="" id="infoValorProduto">
+                                <input type="text" name="" id="infoValorProduto" ng-value="myVar.valor">
                                 <label>Quantidade do Produto:</label>
-                                <input type="text" name="" id="infoQtdProduto">
+                                <input type="text" name="" id="infoQtdProduto" ng-value="myVar.quantidade">
+                            </form>
                             </div>
                             <div id="modalbuttom" class="row g-3">
                                 
@@ -218,7 +168,7 @@
                     </div>
                 </div>
             </div>   
-        </section>
+        </form>
         
         
     </main>
