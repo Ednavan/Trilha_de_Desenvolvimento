@@ -104,16 +104,14 @@
             </div>
         </section>
 
-       
- 
-        
+    
         <div class="container-fluid grid" >
             <section class="container grid grid-template-columns"  >
                 <div class="item" class="card" style="width: 18rem;" ng-repeat="a in arrayProduto">
                     <img src="..." class="card-img-top">
                     <div class="collapse" id="collapseExample">
                         
-                        <button id="editar" class="btn btn-primary me-md-2"data-bs-toggle="modal" ng-click="add(a)"  data-bs-target="#modalEdicaoProduto" data-backdrop="static" data-keyboard="false" type="button">
+                        <button id="editar" class="btn btn-primary me-md-2"data-bs-toggle="modal" ng-click="editar(a)"  data-bs-target="#modalEdicaoProduto" data-backdrop="static" data-keyboard="false" type="button">
                     <i class="bi bi-pencil"></i>
                     </button>
 
@@ -169,6 +167,25 @@
                 </div>
             </div>   
         </form>
+
+
+        <!--Modal de (dados alterados com sucesso)-->
+        <div class="modal fade" id="modalAlteradosComSucesso" tabindex="-1"  aria-labelledby="modalAlteradosComSucesso" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content" >
+                    <div class="modal-body">
+                        <div >
+                        <h6>Dados alterados com sucesso!</h6>
+                        </div>
+                        <div id="modalbuttom" class="row g-3">
+                            
+                           <button id="modalNao" class="btn btn-primary col-md-4" onclick="location.href=document.referrer">OK</button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         
         
     </main>

@@ -38,7 +38,7 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
    
     })
 
-    $scope.add = function(a){
+    $scope.editar = function(a){
         
         $scope.myVar = a;
         console.log(a)
@@ -47,18 +47,6 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
     
    
 );
-
-
-
-
-
-
- /*
-$(document).ready(function(){
-   $('input.money').mask('#.##0,00', {reverse: true});
-
-});
-*/
 
 
 /*bloqueia modal quando clica fora da página */
@@ -82,7 +70,6 @@ $(document).ready(function(){
 
     
 
-
 /*configuração  de campo de validacao caso clique em (sim)*/
 function limpa(){
     if(document.getElementById('inputProduto').value!=""){
@@ -102,16 +89,6 @@ function preserv(){
 function preservCancelar(){
     $("#exampleModal").modal('hide');
 }
-
-
-
-
-/*
- $(function(){
-    $("#money").maskMoney();
- });
-*/
-
 
  $(function(){
     $("#mascara").maskMoney({
@@ -141,13 +118,6 @@ function formatarMoeda(){
 }
 
 
-
-
-/*
-$(document).ready(function(){
-    $("#inputValorProduto").mask("R$ 0,00")
-});
-*/
 
 
 
