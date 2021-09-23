@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-br" ng-app="meuModulo">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
+
 
     <link rel="stylesheet" href="styles/index.css">
-    
+
     <!--Chamando Angularjs:-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script src="js/angular.js"></script>
     <script src="js/controller.js"></script>
-    
-        
 
-    
-    
+
+
+
+
     <!--Chamando o Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-   
+
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>  
-    
-    
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>-->
+    <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script>
+
+
     <title>Só Vamu</title>
 </head>
+
 <body ng-controller="indexController">
-    
+
 
     <header>
-    <div id="meuInicial">
-       <h1>Lojinha Virtual do Só Vamu</h1>
-    </div>
+        <div id="meuInicial">
+            <h1>Lojinha Virtual do Só Vamu</h1>
+        </div>
     </header>
-    
-    
+
+
     <nav id="nav">
         <div class="container" onclick="myFunction(this)">
             <div class="bar1"></div>
@@ -56,140 +61,155 @@
     -->
 
     <nav id="nav2">
-        <div class="switch-menu-container"class="collapse" >
-            <input type="checkbox"  data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        <div class="switch-menu-container" class="collapse">
+            <input type="checkbox" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+                aria-controls="collapseExample">
 
         </div>
     </nav>
 
 
-    <main>       
-        <div id="titulo-busca" class="container"> 
+    <main>
+        <div id="titulo-busca" class="container">
             <h6>O que você está procurando?</h6>
         </div>
 
         <div class="container">
-              <div class="submit-line">
+            <div class="submit-line">
                 <input type="text" />
                 <button class="submit-lente" type="submit">
-                  <i class="fa fa-search"></i>
+                    <i class="fa fa-search"></i>
                 </button>
-              </div>
-              </form>
+            </div>
+            </form>
         </div>
 
 
 
 
         <div class="collapse" id="collapseExample">
-  
-            <button href="http://www.w3schools.com/html/" id="Adicionando" class="btn btn-primary me-md-2" onclick='window.open("nova-pagina.html")'  type="button"><a href="nova-pagina.html" target="_blank"></a>Adicionar Produto</button>
-      
-         </div>
-         
-       
+
+            <button href="http://www.w3schools.com/html/" id="Adicionando" class="btn btn-primary me-md-2"
+                onclick='window.open("nova-pagina.html")' type="button"><a href="nova-pagina.html"
+                    target="_blank"></a>Adicionar Produto</button>
+
+        </div>
+
+
 
         <section id="filtro">
-            
+
             <div class="dropdown">
-              <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                Filtro
-              </a>
-            
-              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                <li><a class="dropdown-item" href="#"></a></li>
-                <li><a class="dropdown-item" href="#"></a></li>
-                <li><a class="dropdown-item" href="#"></a></li>
-              </ul>
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Filtro
+                </a>
+
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="#"></a></li>
+                    <li><a class="dropdown-item" href="#"></a></li>
+                    <li><a class="dropdown-item" href="#"></a></li>
+                </ul>
             </div>
         </section>
 
-    
-        <div class="container-fluid grid" >
-            <section class="container grid grid-template-columns"  >
-                <div class="item" class="card" style="width: 18rem;" ng-repeat="a in arrayProduto">
-                    <img src="..." class="card-img-top">
-                    <div class="collapse" id="collapseExample">
-                        
-                        <button id="editar" class="btn btn-primary me-md-2"data-bs-toggle="modal" ng-click="editar(a)"  data-bs-target="#modalEdicaoProduto" data-backdrop="static" data-keyboard="false" type="button">
-                    <i class="bi bi-pencil"></i>
-                    </button>
 
+        <div class="container-fluid grid">
+            <section class="container grid grid-template-columns">
+                <div class="item" class="card" style="width: 18rem;" ng-repeat="a in arrayProduto" ng-if="a.quantidade != 0 || a.valor != 0">
+                    <img src="..." class="card-img-top" >
                     <div class="collapse" id="collapseExample">
-                        <button id="remover" class="btn btn-primary me-md-2" type="button">
-                            <i class="bi bi-trash"></i>
+
+                        <button id="editar" class="btn btn-primary me-md-2" data-bs-toggle="modal" ng-click="editar(a)"
+                            data-bs-target="#modalEdicaoProduto" data-backdrop="static" data-keyboard="false"
+                            type="button">
+                            <i class="bi bi-pencil"></i>
                         </button>
-                     </div>
+
+                        <div class="collapse" id="collapseExample">
+                            <button id="remover" class="btn btn-primary me-md-2" type="button">
+                                <i class="bi bi-trash"></i>
+                            </button>
+                        </div>
                     </div>
 
-                <section>  
-                    </br> <!--Espaçamento entre a imgem e o nome produto-->
+                    <br>
+                        </br>
+                        <!--Espaçamento entre a imgem e o nome produto-->
 
-                       
+
                         <td>{{a.nome}}</td> </br>
                         <td>{{a.descricao}}</td> </br>
-                        <td>{{a.valor}}</td>
-                 
-                </section>
+                        <td>{{a.valor}}</td> </br>
+                        <td>{{a.quantidade}}</td >
 
-                </div>   
+                    </section>
+
                 </div>
-            </section>
-            
+        </div>
+        </section>
+
         </div>
 
 
-        <form> 
-            <div class="modal fade" id="modalEdicaoProduto" tabindex="-1"  aria-labelledby="modalEdicaoProduto" aria-hidden="true">
+        <form>
+            <div class="modal fade" id="modalEdicaoProduto" tabindex="-1" aria-labelledby="modalEdicaoProduto"
+                aria-hidden="true">
                 <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content" >
+                    <div class="modal-content">
                         <div class="modal-body">
-                            <div >
-                            <form >
-                                <h6>Edição do produto: "NOME DO PRODUTO"</h6>
-                                <label>Nome do produto:</label>
-                                <input type="text" name="" id="infoProduto" ng-value="myVar.nome">
-                                <label>Descrição do produto:</label>
-                                <input type="text" name="" id="infoDescricao" ng-value="myVar.descricao" >
-                                <label>Valor do Produto:</label>
-                                <input type="text" name="" id="infoValorProduto" ng-value="myVar.valor">
-                                <label>Quantidade do Produto:</label>
-                                <input type="text" name="" id="infoQtdProduto" ng-value="myVar.quantidade">
-                            </form>
+                            <div>
+                                <form>
+                                    <h6>Edição do produto: "NOME DO PRODUTO"</h6>
+                                    <label>Nome do produto:</label>
+                                    <input type="text" name="" id="infoProduto" ng-value="myVar.nome"
+                                        ng-model="myVar.nome">
+                                    <label>Descrição do produto:</label>
+                                    <input type="text" name="" id="infoDescricao" ng-value="myVar.descricao"
+                                        ng-model="myVar.descricao">
+                                    <label>Valor do Produto:</label>
+                                    <input type="text" name="" id="infoValorProduto" ng-value="myVar.valor"
+                                        ng-model="myVar.valor">
+                                    <label>Quantidade do Produto:</label>
+                                    <input type="text" name="" id="infoQtdProduto" ng-value="myVar.quantidade"
+                                        ng-model="myVar.quantidade">
+                                </form>
                             </div>
                             <div id="modalbuttom" class="row g-3">
-                                
-                               <button id="modalNao" class="btn btn-primary col-md-4" onclick="location.href=document.referrer">Cancelar</button>
-                                <button  id="modalSim" class="btn btn-primary col-md-4"  onclick="limpa()">Confirmar</button> 
+
+                                <button id="modalNao" class="btn btn-primary col-md-4"
+                                    onclick="location.href=document.referrer">Cancelar</button>
+                                <button id="modalSim" class="btn btn-primary col-md-4"
+                                    ng-click="enviardados()">Confirmar</button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>   
+            </div>
         </form>
 
-
         <!--Modal de (dados alterados com sucesso)-->
-        <div class="modal fade" id="modalAlteradosComSucesso" tabindex="-1"  aria-labelledby="modalAlteradosComSucesso" aria-hidden="true">
+        <div class="modal fade" id="modalAlteradosComSucesso" tabindex="-1" aria-labelledby="modalAlteradosComSucesso"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content" >
+                <div class="modal-content">
                     <div class="modal-body">
-                        <div >
-                        <h6>Dados alterados com sucesso!</h6>
+                        <div>
+                            <h6>Dados alterados com sucesso!</h6>
                         </div>
                         <div id="modalbuttom" class="row g-3">
-                            
-                           <button id="modalNao" class="btn btn-primary col-md-4" onclick="location.href=document.referrer">OK</button>
-                            
+
+                            <button id="modalNao" class="btn btn-primary col-md-4">OK</button>
+
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        
+
+
     </main>
-    
+
 
     <footer>
         <nav aria-label="Page navigation example">
@@ -214,4 +234,5 @@
         </nav>
     </footer>
 </body>
+
 </html>
