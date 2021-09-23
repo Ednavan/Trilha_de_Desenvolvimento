@@ -5,7 +5,6 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
 
         if ($("#inputProduto").val() != "" & $('#inputDescricao').val() != "" & $('#valor').val() != "" & $('#inputQtd').val() != "" ) {
            
-           
             console.log('clicked sumit');
             $http({
                 url: 'http://localhost:3000/arrayProduto',
