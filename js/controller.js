@@ -42,7 +42,7 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
 
         $scope.myVar = a;
        
-        console.log($scope.myVar)
+        
     }
 
 
@@ -65,15 +65,21 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
     }   
 
     
-        $scope.deletar=function(){
+        $scope.deletar=function(a){
+            $scope.deleteArq = a;
+            console.log($scope.deleteArq)
+
+
             $http({
-                url: 'http://localhost:3000/arrayProduto/' + $scope.myVar.id,
+                url: 'http://localhost:3000/arrayProduto/' + $scope.deleteArq.id,
                 method: 'delete',
                 
             }).then(function(){
-                alert('User has deleted successfully')
-                var index = $scope.myVar.indexOf(myVar);
-                $scope.myVar.splice(index,1)
+                alert('User has deleted successfully');
+                var index = $scope.arrayProduto.indexOf(deleteArq);
+                $scope.arrayProduto.splice(index,1);
+            }).catch(function(){
+                alert("erro")
             })
         }
   
