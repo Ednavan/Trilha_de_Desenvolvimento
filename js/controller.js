@@ -41,27 +41,43 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
     $scope.editar = function (a) {
 
         $scope.myVar = a;
-
-
+       
+        console.log($scope.myVar)
     }
+
 
     $scope.enviardados = function () {
         $http({
             url: 'http://localhost:3000/arrayProduto/' + $scope.myVar.id, //seleciona o dados atraves do id
             data: $scope.myVar, //envia os dados atraves do seu conjunto    
             method: "patch", //é mais importante é responsável pela ação do método
-
+           
         }).then(function (tratamento) {
             console.log("SUCCESS");
             console.log(tratamento)
-            // $scope.arrayProduto = data.items
-        }).catch(function () {
-            alert("Eroo")
+            $('#modalSucesso').modal('hide')
+          
+        }).catch(function() {
+            console.log("chegou aqui");
+            $('#modalErroEditar').modal('hide')
         })
 
-    }
+    }   
 
-
+    
+        $scope.deletar=function(){
+            $http({
+                url: 'http://localhost:3000/arrayProduto/' + $scope.myVar.id,
+                method: 'delete',
+                
+            }).then(function(){
+                alert('User has deleted successfully')
+                var index = $scope.myVar.indexOf(myVar);
+                $scope.myVar.splice(index,1)
+            })
+        }
+  
+    
 });
 
 
