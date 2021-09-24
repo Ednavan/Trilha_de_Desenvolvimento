@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="styles/nova-pagina.css">
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
     
     <!--Chamando o Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
@@ -13,14 +15,14 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     
+   
+    
     <!--Chamando Angularjs:-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="js/jquery.mask.min.js"></script>
     <script src="js/angular.js"></script>
     <script src="js/controller.js"></script>
     
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
     
  
 
@@ -117,7 +119,7 @@
                 
                 <button id="cancelar" class="btn btn btn-primary  me-md-6 col-md-3 " type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-backdrop="static" data-keyboard="false">Cancelar</button>
 
-                <button id="addproduto" class="btn btn btn-primary  me-md-6 col-md-3 " type="button" ng-click="submit()">Adicionar Produto</button>
+                <button id="addproduto" class="btn btn btn-primary  me-md-6 col-md-3 " type="button"  ng-click="submit() " >Adicionar Produto</button>
             
             </div>
          

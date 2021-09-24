@@ -1,4 +1,4 @@
-angular.module("meuModulo").controller("indexController", function ($scope, $http) {
+angular.module("meuModulo").controller("indexController", function ($scope, $http)  {
 
     $scope.data = {};
     $scope.submit = function () {
@@ -14,6 +14,8 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
             }).then(function () {
 
                 $('#modalAdiciona').modal('toggle')
+              
+
 
             }).catch(function () {
 
@@ -55,19 +57,24 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
         }).then(function (tratamento) {
             console.log("SUCCESS");
             console.log(tratamento)
-            $('#modalSucesso').modal('hide')
+            $('#modalSucesso').modal("show")
           
+         
         }).catch(function() {
             console.log("chegou aqui");
-            $('#modalErroEditar').modal('hide')
+            $('#modalErroEditar').modal("show")
         })
 
     }   
 
+
+
+
+
     
         $scope.deletar=function(a){
             $scope.deleteArq = a;
-            console.log($scope.deleteArq)
+            
 
 
             $http({
@@ -75,14 +82,21 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
                 method: 'delete',
                 
             }).then(function(){
-                alert('User has deleted successfully');
+
+                $('#modalAdiciona').modal('toggle')
+
+
                 var index = $scope.arrayProduto.indexOf(deleteArq);
                 $scope.arrayProduto.splice(index,1);
+                
             }).catch(function(){
-                alert("erro")
+                
             })
         }
-  
+        
+       
+
+
     
 });
 
@@ -108,6 +122,8 @@ $(document).ready(function () {
 
 
 
+
+
 /*configuração  de campo de validacao caso clique em (sim)*/
 function limpa() {
     if (document.getElementById('inputProduto').value != "") {
@@ -128,14 +144,14 @@ function preservCancelar() {
     $("#exampleModal").modal('hide');
 }
 
-$(function () {
-    $("#mascara").maskMoney({
-        prefix: 'R$ ',
-        allowNegative: true,
-        thousands: '.',
-        decimal: ','
-    });
-});
+// $(function () {
+//     $("#mascara").maskMoney({
+//         prefix: 'R$ ',
+//         allowNegative: true,
+//         thousands: '.',
+//         decimal: ','
+//     });
+// });
 
 
 function formatarMoeda() {
