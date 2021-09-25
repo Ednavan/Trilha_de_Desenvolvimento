@@ -1,10 +1,10 @@
-angular.module("meuModulo").controller("indexController", function ($scope, $http)  {
+angular.module("meuModulo").controller("indexController", function ($scope, $http) {
 
     $scope.data = {};
     $scope.submit = function () {
 
-        if ($("#inputProduto").val() != "" & $('#inputDescricao').val() != "" & $('#valor').val() != "" & $('#inputQtd').val() != "" ) {
-           
+        if ($("#inputProduto").val() != "" & $('#inputDescricao').val() != "" & $('#valor').val() != "" & $('#inputQtd').val() != "") {
+
             console.log('clicked sumit');
             $http({
                 url: 'http://localhost:3000/arrayProduto',
@@ -14,7 +14,7 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
             }).then(function () {
 
                 $('#modalAdiciona').modal('toggle')
-              
+
 
 
             }).catch(function () {
@@ -23,10 +23,10 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
 
             }
             )
-        
+
         } else {
             alert("Não é possível cadastrar objetos sem conter todos os dados!")
-       } 
+        }
     }
 
     $http.get('http://localhost:3000/arrayProduto').
@@ -43,8 +43,8 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
     $scope.editar = function (a) {
 
         $scope.myVar = a;
-       console.log('edit',$scope.myVar)
-        
+        console.log('edit', $scope.myVar)
+
     }
 
 
@@ -53,50 +53,50 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
             url: 'http://localhost:3000/arrayProduto/' + $scope.myVar.id, //seleciona o dados atraves do id
             data: $scope.myVar, //envia os dados atraves do seu conjunto    
             method: "patch", //é mais importante é responsável pela ação do método
-           
+
         }).then(function (tratamento) {
             console.log("SUCCESS");
             console.log(tratamento)
-            
+
             $('#modaldadosalterados').modal("show")
-          
-         
-        }).catch(function() {
+
+
+        }).catch(function () {
             console.log("chegou aqui");
             $('#modalErroEditar').modal("show")
         })
 
-    }  
+    }
 
-    
- 
-            $scope.delete=function(a){
-                console.log('chego', $scope.myVar)
-                $scope.myVar = a;
-                 
-            }
 
-            $scope.enviodeletando=function(myVar){
-                console.log($scope.myVar)
-            $http({
-                url: 'http://localsddsdddd' + $scope.myVar.id,
-                method: 'DELETE',
-                 data: $scope.myVar
 
-            }).then(function(){
-                
-                var index = $scope.arrayProduto.indexOf();
-                $scope.arrayProduto.splice(index,1);
-                $('#excluiPro').modal('show')
-                
-            }).catch(function(){
-                $('#erroAoExcluirProtudo').modal('show')
-            })
-        
-        
-        }
-        
-    
+    $scope.delete = function (a) {
+        console.log('chego', $scope.myVar)
+        $scope.myVar = a;
+
+    }
+
+    $scope.enviodeletando = function (myVar) {
+        console.log($scope.myVar)
+        $http({
+            url: 'http://localsddsdddd' + $scope.myVar.id,
+            method: 'DELETE',
+            data: $scope.myVar
+
+        }).then(function () {
+
+            var index = $scope.arrayProduto.indexOf();
+            $scope.arrayProduto.splice(index, 1);
+            $('#excluiPro').modal('show')
+
+        }).catch(function () {
+            $('#erroAoExcluirProtudo').modal('show')
+        })
+
+
+    }
+
+
 });
 
 
@@ -170,17 +170,17 @@ function modalVoltar() {
 
 
 function formatarMoeda() {
-    var elemento = document.getElementById('valor' );
+    var elemento = document.getElementById('valor');
     var valor = elemento.value;
-  
+
     valor = valor + '';
-  
+
     valor = parseInt(valor.replace(/[\D]+/g, ''));
     valor = valor + '';
     valor = valor.replace(/([0-9]{2})$/g, ",$1");
 
     if (valor.length > 6) {
-        valor = valor.replace(/([0-9]{3}),([0-9]{2}$)/g,   ".$1,$2");
+        valor = valor.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
 
     }
     elemento.value = valor;
