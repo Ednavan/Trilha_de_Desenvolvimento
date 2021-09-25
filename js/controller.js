@@ -155,6 +155,10 @@ function preservEditarErro() {
     $("#modalErroEditar").modal('hide');
 }
 
+function modalVoltar() {
+    $("#erroAoExcluirProtudo").modal('hide');
+}
+
 // $(function () {
 //     $("#mascara").maskMoney({
 //         prefix: 'R$ ',
