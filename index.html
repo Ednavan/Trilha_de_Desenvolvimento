@@ -3,14 +3,14 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="180">
+    <!-- <meta http-equiv="refresh" content="4"> -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
 
     <link rel="stylesheet" href="styles/index.css">
-  
+
     <script src="js/jquery-3.6.0.min.js" type="text/javascript"></script>
     <!-- <script src="https://igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js"></script> -->
 
@@ -34,9 +34,9 @@
 
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-   
 
-    
+
+
 
     <title>Só Vamu</title>
 </head>
@@ -90,9 +90,9 @@
             </form>
         </div>
 
-      
-    
-      
+
+
+
 
         <div class="collapse" id="collapseExample">
 
@@ -119,11 +119,11 @@
                 </ul>
             </div>
         </section>
-        
+
 
         <div class="container-fluid grid">
             <section class="container grid grid-template-columns">
-                <div class="item" class="card" style="width: 18rem;" ng-repeat="a in arrayProduto" >
+                <div class="item" class="card" style="width: 18rem;" ng-repeat="a in arrayProduto">
 
                     <div class="collapse" id="collapseExample">
 
@@ -134,31 +134,33 @@
                         </button>
 
                         <div class="collapse" id="collapseExample">
-                            <button id="remover" class="btn btn-primary me-md-2"  ng-click="deletar(a)" type="button" >
+                            <button id="remover" class="btn btn-primary me-md-2" ng-click="editar(a)"
+                                data-bs-toggle="modal" data-bs-target="#modalDesejaExcluir" type="button">
                                 <i class="bi bi-trash"></i>
                             </button>
                         </div>
                     </div>
 
+
                     <br>
-                        </br>
-                        <!--Espaçamento entre a imgem e o nome produto-->
+                    </br>
+                    <!--Espaçamento entre a imgem e o nome produto-->
 
 
-                        <td>{{a.nome}}</td> </br>
-                        <td>{{a.descricao}}</td> </br>
-                        <td>{{a.valor}}</td> </br>
-                        <td>{{a.quantidade}}</td >
-                            
-                    </section>
+                    <td>{{a.nome}}</td> </br>
+                    <td>{{a.descricao}}</td> </br>
+                    <td>{{a.valor}}</td> </br>
+                    <td>{{a.quantidade}}</td>
 
                 </div>
+            </section>
+
         </div>
         </section>
 
         </div>
 
-       
+
         <form>
             <div class="modal fade" id="modalEdicaoProduto" tabindex="-1" aria-labelledby="modalEdicaoProduto"
                 aria-hidden="true">
@@ -186,7 +188,8 @@
 
                                 <button id="modalNao" class="btn btn-primary col-md-4"
                                     onclick="location.href=document.referrer">Cancelar</button>
-                                <button id="modalSim" class="btn btn-primary col-md-4" ng-click="enviardados()">Confirmar</button>
+                                <button id="modalSim" class="btn btn-primary col-md-4"
+                                    ng-click="enviardados()">Confirmar</button>
                             </div>
                         </div>
                     </div>
@@ -195,36 +198,80 @@
         </form>
 
         <!--Modal de (dados alterados com sucesso)-->
-        <div class="modal fade" id="modalSucesso" tabindex="-1" aria-labelledby="modalSucesso"
+        <div class="modal fade" id="modalDesejaExcluir" tabindex="-1" aria-labelledby="modalDesejaExcluir"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-body">
                         <div>
-                            <h6>Dados alterados com sucesso!</h6>
+                            <h6>Tem certeza que deseja excluir o produto </h6>
                         </div>
                         <div id="modalbuttom" class="row g-3">
 
-                            <button id="modalNao" class="btn btn-primary col-md-4" onclick="location.href=document.referrer" >OK</button>
-
+                            <button id="modalNaoExcluir" class="btn btn-primary col-md-4"
+                                onclick="location.href=document.referrer">Não</button>
+                            <button id="modalSimExcluir" class="btn btn-primary col-md-4"
+                                ng-click="enviodeletando(myVar)">Sim</button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        
+
 
         <!--Modal de (erro ao tentar excluir o produto, Deseja tentar novamente)-->
-        <div class="modal fade" id="modalErroEditar" tabindex="-1" aria-labelledby="modalErroEditar"
-            aria-hidden="true">
+        <div class="modal fade" id="modalErroEditar" tabindex="-1" aria-labelledby="modalErroEditar" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-body">
                         <div>
                             <h6>Erro ao tentar editar. Deseja tentar novamente?</h6>
                         </div>
-                        <div id="modalbuttom" class="row g-3"> 
-                            <button>CANCELAR</button>
+                        <div id="modalbuttom" class="row g-3">
+                            <button id="modalErro" class="btn btn-primary col-md-4"
+                                onclick="location.href=document.referrer">Cancelar</button>
+
+                            <button id="modalEditarErro" class="btn btn-primary col-md-4"
+                                onclick="preservEditarErro()">Sim</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Modal de (Produto excluído com sucesso!)-->
+        <div class="modal fade" id="modaldadosalterados" tabindex="-1" aria-labelledby="modaldadosalterados"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div>
+                            <h6>Dados alterados com sucesso</h6>
+                        </div>
+                        <div id="modalbuttom" class="row g-3">
+
+                            <button id="modalNao" class="btn btn-primary col-md-4"
+                                onclick="location.href=document.referrer">OK</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--Modal de (Produto excluído com sucesso!)-->
+        <div class="modal fade" id="excluiPro" tabindex="-1" aria-labelledby="excluiPro" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div>
+                            <h6>Produto excluído com sucesso!</h6>
+                        </div>
+                        <div id="modalbuttom" class="row g-3">
+
+                            <button id="modalNao" class="btn btn-primary col-md-4"
+                                onclick="location.href=document.referrer">OK</button>
+
                         </div>
                     </div>
                 </div>
@@ -232,24 +279,26 @@
         </div>
 
 
-          <!--Modal de (Produto excluído com sucesso!)-->
-          <div class="modal fade" id="excluiPro" tabindex="-1" aria-labelledby="excluiPro"
-          aria-hidden="true">
-          <div class="modal-dialog modal-dialog-centered">
-              <div class="modal-content">
-                  <div class="modal-body">
-                      <div>
-                          <h6>Produto excluído com sucesso!</h6>
-                      </div>
-                      <div id="modalbuttom" class="row g-3">
+        <!--Modal de (Produto excluído com sucesso!)-->
+        <div class="modal fade" id="erroAoExcluirProtudo" tabindex="-1" aria-labelledby="erroAoExcluirProtudo" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div>
+                            <h6>Erro ao tentar excluir o produto. Deseja tentar novamente?</h6>
+                        </div>
+                        <div id="modalbuttom" class="row g-3">
 
-                          <button id="modalNao" class="btn btn-primary col-md-4" onclick="location.href=document.referrer">OK</button>
+                            <button id="" class="btn btn-primary col-md-4"
+                                onclick="location.href=document.referrer">Não</button>
 
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
+                            <button id="" class="btn btn-primary col-md-4"
+                                onclick="location.href=document.referrer">Sim</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </main>
 

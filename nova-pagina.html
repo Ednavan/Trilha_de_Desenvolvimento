@@ -47,12 +47,16 @@
                     <input type="text" class="form-control" ng-model="data.nome" id="inputProduto" ng-model="inputProduto" name="inputProduto"  onsubmit="formu()">
                     <label for="inputDescricao" class="form-label">Descrição do Produto:</label>
                     <input type="text" class="form-control" ng-model="data.descricao" id="inputDescricao" name="inputDescricao">
+
+                    <input type="text">
+
+                    
                 </div>
 
                 <div class="col-md-3" >
                     <label for="inputValorProduto"> Valor do Produto: </label>
                
-                    <input type="text" maxlength="9"  class="form-control" id="valor" ng-model="data.valor" onkeyup="formatarMoeda()">
+                    <input type="text" maxlength="9"  class="form-control"  currency="R$" id="valor" ng-model="data.valor" onkeyup="formatarMoeda()" data-prefix="R$">
              
                 </div>
                 

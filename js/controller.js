@@ -43,7 +43,7 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
     $scope.editar = function (a) {
 
         $scope.myVar = a;
-       
+       console.log('edit',$scope.myVar)
         
     }
 
@@ -57,7 +57,8 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
         }).then(function (tratamento) {
             console.log("SUCCESS");
             console.log(tratamento)
-            $('#modalSucesso').modal("show")
+            
+            $('#modaldadosalterados').modal("show")
           
          
         }).catch(function() {
@@ -65,38 +66,36 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
             $('#modalErroEditar').modal("show")
         })
 
-    }   
-
-
-
-
+    }  
 
     
-        $scope.deletar=function(a){
-            $scope.deleteArq = a;
-            
+ 
+            $scope.delete=function(a){
+                console.log('chego', $scope.myVar)
+                $scope.myVar = a;
+                 
+            }
 
-
+            $scope.enviodeletando=function(myVar){
+                console.log($scope.myVar)
             $http({
-                url: 'http://localhost:3000/arrayProduto/' + $scope.deleteArq.id,
-                method: 'delete',
-                
+                url: 'http://localsddsdddd' + $scope.myVar.id,
+                method: 'DELETE',
+                 data: $scope.myVar
+
             }).then(function(){
-
-                $('#modalAdiciona').modal('toggle')
-
-
-                var index = $scope.arrayProduto.indexOf(deleteArq);
+                
+                var index = $scope.arrayProduto.indexOf();
                 $scope.arrayProduto.splice(index,1);
+                $('#excluiPro').modal('show')
                 
             }).catch(function(){
-                
+                $('#erroAoExcluirProtudo').modal('show')
             })
+        
+        
         }
         
-       
-
-
     
 });
 
@@ -121,8 +120,16 @@ $(document).ready(function () {
 });
 
 
+$(document).ready(function () {
+    $('#modaldadosalterados').modal({ backdrop: 'static', keyboard: false })
+
+});
 
 
+$(document).ready(function () {
+    $('#modalErroEditar').modal({ backdrop: 'static', keyboard: false })
+
+});
 
 /*configuração  de campo de validacao caso clique em (sim)*/
 function limpa() {
@@ -144,6 +151,10 @@ function preservCancelar() {
     $("#exampleModal").modal('hide');
 }
 
+function preservEditarErro() {
+    $("#modalErroEditar").modal('hide');
+}
+
 // $(function () {
 //     $("#mascara").maskMoney({
 //         prefix: 'R$ ',
@@ -155,16 +166,17 @@ function preservCancelar() {
 
 
 function formatarMoeda() {
-    var elemento = document.getElementById('valor');
+    var elemento = document.getElementById('valor' );
     var valor = elemento.value;
-
+  
     valor = valor + '';
+  
     valor = parseInt(valor.replace(/[\D]+/g, ''));
     valor = valor + '';
     valor = valor.replace(/([0-9]{2})$/g, ",$1");
 
     if (valor.length > 6) {
-        valor = valor.replace(/([0-9]{3}),([0-9]{2}$)/g, ".$1,$2");
+        valor = valor.replace(/([0-9]{3}),([0-9]{2}$)/g,   ".$1,$2");
 
     }
     elemento.value = valor;
