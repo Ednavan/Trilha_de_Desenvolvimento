@@ -131,6 +131,20 @@ $(document).ready(function () {
 
 });
 
+
+$(document).ready(function () {
+    $('#excluiPro').modal({ backdrop: 'static', keyboard: false })
+
+});
+
+
+
+$(document).ready(function () {
+    $('#erroAoExcluirProtudo').modal({ backdrop: 'static', keyboard: false })
+
+});
+
+
 /*configuração  de campo de validacao caso clique em (sim)*/
 function limpa() {
     if (document.getElementById('inputProduto').value != "") {
