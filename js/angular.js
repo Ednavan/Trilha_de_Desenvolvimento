@@ -1,1 +1,1 @@
-angular.module("meuModulo", [])
+angular.module("meuModulo", ['cur.$mask'])
