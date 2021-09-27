@@ -79,7 +79,7 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
     $scope.enviodeletando = function (myVar) {
         console.log($scope.myVar)
         $http({
-            url: 'http://localsddsdddd' + $scope.myVar.id,
+            url: 'http://localhost:3000/arrayProduto/' + $scope.myVar.id,
             method: 'DELETE',
             data: $scope.myVar
 
