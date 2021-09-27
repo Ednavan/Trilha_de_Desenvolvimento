@@ -214,6 +214,7 @@ input[type=text]:focus {
 }
 
 #editar{
+    margin-top: 15px;
     position: absolute;
     background: #fff;
     border: 1px solid black;
@@ -222,6 +223,7 @@ input[type=text]:focus {
 }
 
 #remover{
+    margin-top: 15px;
     position: absolute;
     background: #fff;
     border: 1px solid black;

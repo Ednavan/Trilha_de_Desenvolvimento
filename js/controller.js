@@ -157,6 +157,13 @@ $(document).ready(function () {
 
 });
 
+
+
+$(document).ready(function () {
+    $('#modalEdicaoProduto').modal({ backdrop: 'static', keyboard: false })
+
+});
+
 /*configuração  de campo de validacao caso clique em (sim)*/
 function limpa() {
     if (document.getElementById('inputProduto').value != "") {
