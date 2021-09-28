@@ -45,7 +45,9 @@
         
     }
    
-   
+    #dropdownMenuLink{
+        right: 75%;
+    }
 
 
 
@@ -257,7 +259,7 @@ input[type=text]:focus {
     position: absolute;
     margin-left: 220px;
     margin-top: 25px;
-    background: #fff;
+    background: rgba(0, 183, 255, 0.521);
     color:black;
 
 }
@@ -277,7 +279,7 @@ input[type=text]:focus {
 #editar{
     margin-top: 15px;
     position: absolute;
-    background: #fff;
+    background: rgba(0, 183, 255, 0.521);
     border: 1px solid black;
     color: black;
     
@@ -286,7 +288,7 @@ input[type=text]:focus {
 #remover{
     margin-top: 15px;
     position: absolute;
-    background: #fff;
+    background: rgba(0, 183, 255, 0.521);
     border: 1px solid black;
     color: black;
     margin-left: 49px;
