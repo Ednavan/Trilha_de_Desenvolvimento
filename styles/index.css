@@ -25,10 +25,8 @@
     }
 
     .submit-line input {
+       max-width: 150%;
         
-        
-       display: block;
-       max-width: 450px;
       
     }
     #nav2 {
