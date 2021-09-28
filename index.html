@@ -124,9 +124,9 @@
 
 
         <div class="container-fluid grid">
-            <section class="container grid grid-template-columns">
-                <div class="item" class="card" style="width: 18rem;" ng-repeat="a in arrayProduto">
-
+            <section class="container grid grid-template-columns" ng-repeat="a in arrayProduto">
+                <div class="item" class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top">
                     <div class="collapse" id="collapseExample">
 
                         <button id="editar" class="btn btn-primary me-md-2" data-bs-toggle="modal" ng-click="editar(a)"
@@ -148,7 +148,7 @@
                     </br>
                     <!--Espaçamento entre a imgem e o nome produto-->
 
-
+                    
                     <td>{{a.nome}}</td> </br>
                     <td>{{a.descricao}}</td> </br>
                     <td>{{a.valor}}</td> </br>

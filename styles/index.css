@@ -7,13 +7,16 @@
 @media (min-width: 576px) and (max-width: 767.98px) {
     #meuInicial{
         background: rgba(0, 183, 255, 0.521);
+        
+        
     }
 
     #meuInicial  h1  {
         
         max-width: 94%;
-        margin-right: 15%;
-        color: rgb(255, 255, 255);    
+        margin-right: 9%;
+        color: rgb(255, 255, 255);
+            
         text-align: center;
     }
     nav{
@@ -23,16 +26,28 @@
 
     .submit-line input {
         
-        max-width: 450px;
+        max-width: 550px;
         height: 40px;
     }
     #nav2 {
-      margin-right: 22%;
+      margin-right: 10%;
     }
-    #titulo-busca{
-      
+    /* #titulo-busca{
     
+    
+    } */
+    
+    .container-fluid.grid{
+    
+        
+        display:block ;
+        margin-left: 12%;
+        
     }
+   
+   
+
+
 
 }   
 
@@ -44,7 +59,7 @@
     overflow: hidden;
    display: block;
    font-size: 25px;
-    border: solid 1px black;
+    border:  rgb(241, 241, 241);
     text-align: center;
     padding-top: 2px;
 }
