@@ -26,7 +26,7 @@
 
     .submit-line input {
        max-width: 120%;
-        flex-wrap: wrap;
+        
       
     }
     #nav2 {
@@ -35,9 +35,9 @@
   
     .container-fluid.grid{
     
-        
-        display:block ;
-        margin-left: 12%;
+        display: block;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
+        margin-left: auto;
         
     }
    
@@ -424,6 +424,4 @@ input[type=text]:focus {
 }
 
 
- #modalFormEditButtom {
-   
- }
+ 
