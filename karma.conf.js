@@ -18,10 +18,12 @@ module.exports = function(config) {
       'node_module/angular/angular.js',
       'node_module/angular-mocks/angular-mocks.js',
       'node_modules/angular-ui-router/release/angular--ui-router.js',
-
+  
       
+      '/js/service.js',
+      '/js/controller.js',
+      '/js/users.spec.js',
     
-      
     ],
 
 

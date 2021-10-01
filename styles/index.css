@@ -99,7 +99,7 @@
     overflow: hidden;
    display: block;
    font-size: 25px;
-    border:  rgb(241, 241, 241);
+   background: rgba(0, 183, 255, 0.521);
     text-align: center;
     padding-top: 2px;
 }
@@ -154,7 +154,7 @@ input[type="checkbox"]{
     width: 50px;
     height: 20px;
     appearance: none;
-    background-color: rgb(255, 255, 255);
+    background: rgba(0, 183, 255, 0.521);
     border-radius: 50px;
     border:solid 2px;
     cursor: pointer;
@@ -172,7 +172,7 @@ input[type="checkbox"]::before{
     content: '';
     width: 16px;
     height: 16px;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     border-radius: 50px;
     position: absolute;
     top:0;
@@ -250,15 +250,17 @@ input[type=text]:focus {
 
   .grid-template-columns{
       grid-template-columns:1fr 1fr 1fr;
+      
   }
 
 
 .grid{
     display: grid;
+  
 }
   
 .item{
-      margin: 50px;
+      margin: 70px;
      
       text-align: center;
       font-size: 1.5em;
@@ -282,7 +284,7 @@ input[type=text]:focus {
 
 
 .pagination li > a{
-    background-color: white;
+    background: rgba(0, 183, 255, 0.521);
     color: black;
 }
 
@@ -307,7 +309,7 @@ input[type=text]:focus {
     position: absolute;
     margin-left: 975px;
     margin-top: 25px;
-    background: #fff;
+    background: rgba(0, 183, 255, 0.521);
     border: 1px solid black;
     color: black;
   
