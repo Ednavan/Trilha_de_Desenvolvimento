@@ -84,14 +84,14 @@
 
 #modalSim{
     margin-left: 150px;
-    background: #fff;
+    background: rgba(0, 183, 255, 0.521);
     border: solid 1px black;
     color: black;
 
 }
 
 #modalNao{
-    background: #fff;
+    background: rgba(0, 183, 255, 0.521);
     border: solid 1px black;
     color: black;
 }

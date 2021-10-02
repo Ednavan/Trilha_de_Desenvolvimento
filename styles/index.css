@@ -95,7 +95,7 @@
 
 #meuInicial{
     top: 0;
-    max-width: 100%;
+    width: 100%;
     overflow: hidden;
    display: block;
    font-size: 25px;
@@ -249,10 +249,10 @@ input[type=text]:focus {
    flex: 1 1 200px
   }
 
-  .grid-template-columns{
+  /* .grid-template-columns{
       grid-template-columns:1fr 1fr 1fr;
       
-  }
+  } */
 
 
 .grid{
@@ -261,19 +261,13 @@ input[type=text]:focus {
 }
   
 .item{
-      margin: 70px;
-     
+      margin: 50px;
+     margin-top: 60px;
       text-align: center;
       font-size: 1.5em;
   }
 
 
-
-
-.pagination{
- 
-
-}
 
 .pagination a{
    border: 1px solid black;
