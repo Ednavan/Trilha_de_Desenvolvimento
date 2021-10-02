@@ -373,7 +373,7 @@ input[type=text]:focus {
 
 /* configuração do modal excluir produto */
 #modalDesejaExcluir{
-  
+    margin-top: 50px;
     margin-left: 140px;
     width: 1000px;
     height: 500px;
@@ -402,6 +402,17 @@ input[type=text]:focus {
     margin-top: 100px; 
 }
 
+#excluiPro #DadosExcluidosSucess{
+    background: rgba(0, 183, 255, 0.521);
+    margin-left: 150px;
+
+}
+
+#tituloexcluirdados{
+    text-align: center;
+    margin-top: 120px;
+}
+
 /* configuração do modal edição do produto */
 #infoProduto, #infoDescricao, #infoValorProduto{
     margin-bottom: 15px;
@@ -423,5 +434,14 @@ input[type=text]:focus {
     color: black;
 }
 
+#modalbuttom #alteracaoDeDadosSucess{
+    background: rgba(0, 183, 255, 0.521);
+    margin-left: 150px;
+    
+}
 
- 
+#tituloeditardados{
+    text-align: center;
+    margin-top: 120px;
+}
+
