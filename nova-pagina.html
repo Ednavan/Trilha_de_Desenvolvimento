@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br" ng-app="meuModulo">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="stylesheet" href="styles/nova-pagina.css">
     <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
-    
+
     <!--Chamando o Bootstrap-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    
-   
-    
+
+
+
     <!--Chamando Angularjs:-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
     <script type="text/javascript" src="js/jquery.mask.min.js"></script>
@@ -24,16 +28,17 @@
 
     <script src="js/angular.js"></script>
     <script src="js/controller.js"></script>
-    
-    
- 
+
+
+
 
     <title>Adicionar Produto</title>
 </head>
+
 <body ng-controller="indexController as ctrl">
-    
-   
-    
+
+
+
     <header>
         <div id="menuInicial">
             <h1>Lojinha Virtual Só Vamu </h1>
@@ -42,69 +47,63 @@
 
     <main>
 
-        <section class="container" >
+        <section class="container">
             <form class="row g-3 " id="formularioCadastro" action="" onsubmit="valida_az(this);return false;">
-                <div class="col-12" >
-                    <label for="inputProduto"  class="form-label">Nome do Produto:</label>
-                    <input type="text" class="form-control" onblur="valida_az()" ng-model="data.nome" id="inputProduto" ng-model="inputProduto" name="inputProduto"  onsubmit="formu()">
+                <div class="col-12">
+                    <label for="inputProduto" class="form-label">Nome do Produto:</label>
+                    <input type="text" class="form-control" onblur="valida_az()" ng-model="data.nome" id="inputProduto"
+                        ng-model="inputProduto" name="inputProduto" onsubmit="formu()">
                     <label for="inputDescricao" class="form-label">Descrição do Produto:</label>
-                    <input type="text" class="form-control" ng-model="data.descricao" id="inputDescricao" name="inputDescricao">
+                    <input type="text" class="form-control" ng-model="data.descricao" id="inputDescricao"
+                        name="inputDescricao">
 
-                
 
-                    
+
+
                 </div>
 
-                <div class="col-md-3" >
+                <div class="col-md-3">
                     <label for="inputValorProduto"> Valor do Produto: </label>
-               
-                    <input type="text"   class="form-control" mask-currency="'R$'"  id="valor" ng-model="data.valor">
-                    
-                
+
+                    <input type="text" class="form-control" mask-currency="'R$'" id="valor" ng-model="data.valor">
+
+
 
                 </div>
-                
-               
-         
-              
-                <div id="qtdproduto" class="col-md-3" >
-                    <label for="inputQtd" class="qt" >Quantidade do Produto:</label>
+                <div id="qtdproduto" class="col-md-3">
+                    <label for="inputQtd" class="qt">Quantidade do Produto:</label>
                     <input type="text" class="form-control" ng-model="data.quantidade" id="inputQtd" name="inputQtd">
-
                 </div>
                 </div>
-                
-                
             </form>
-
-
-
-
             <!--estrutura do modal cancelar-->
             <section>
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-body">
-                                <div id="exclamacao" >
-                                    <img  src="img2/exclamation-triangle-fill.jpg" >
-                                    <h6>Deseja cancelar a operação?</h6>              
+                                <div id="exclamacao">
+                                    <img src="img2/exclamation-triangle-fill.jpg">
+                                    <h6>Deseja cancelar a operação?</h6>
                                 </div>
                                 <div id="modalbuttom" class="row g-3">
-                                    <button id="modalNao" href="index2.html" class="btn btn-primary col-md-4"  onclick="preservCancelar()">Não</button>
-                                    <button id="modalSim" class="btn btn-primary col-md-4" onclick="location.href=document.referrer">Sim</button>
-                                   
+                                    <button id="modalNao" href="index2.html" class="btn btn-primary col-md-4"
+                                        onclick="preservCancelar()">Não</button>
+                                    <button id="modalSim" class="btn btn-primary col-md-4"
+                                        onclick="location.href=document.referrer">Sim</button>
+
                                 </div>
                             </div>
                         </div>
 
                     </div>
             </section>
-            
 
             <section>
-                
-                <div class="modal fade" id="modalAdiciona" tabindex="-1" aria-labelledby="modalAdiciona" aria-hidden="true">
+
+                <div class="modal fade" id="modalAdiciona" tabindex="-1" aria-labelledby="modalAdiciona"
+                    aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
                             <div class="modal-body">
@@ -113,29 +112,30 @@
                                     <h6>Deseja cadastrar outro Produto?</h6>
                                 </div>
                                 <div id="modalbuttom" class="row g-3">
-                                    
-                                   <button id="modalNao" class="btn btn-primary col-md-4" onclick="location.href=document.referrer">Não</button>
-                                    <button  id="modalSim" class="btn btn-primary col-md-4"  onclick="limpa()" >Sim</button> 
+
+                                    <button id="modalNao" class="btn btn-primary col-md-4"
+                                        onclick="location.href=document.referrer">Não</button>
+                                    <button id="modalSim" class="btn btn-primary col-md-4"
+                                        onclick="limpa()">Sim</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>   
+                </div>
             </section>
-        
+
             <div id="bottom-finish" class="row g-3">
-                
-                <button id="cancelar" class="btn btn btn-primary  me-md-6 col-md-3 " type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" data-backdrop="static" data-keyboard="false">Cancelar</button>
 
-                <button id="addproduto" class="btn btn btn-primary  me-md-6 col-md-3 " type="button"  ng-click="submit() " >Adicionar Produto</button>
-            
+                <button id="cancelar" class="btn btn btn-primary  me-md-6 col-md-3 " type="button"
+                    data-bs-toggle="modal" data-bs-target="#exampleModal" data-backdrop="static"
+                    data-keyboard="false">Cancelar</button>
+
+                <button id="addproduto" class="btn btn btn-primary  me-md-6 col-md-3 " type="button"
+                    ng-click="submit() ">Adicionar Produto</button>
+
             </div>
-         
-            <!--<BUTton type="button" value="Exibir alert" onclick=exibeAlert()> clique</BUTton>    chamando minha funcção -->
-
 
             <section>
-                
                 <div class="modal fade" id="modalErro" tabindex="-1" aria-labelledby="modalErro" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
                         <div class="modal-content">
@@ -144,22 +144,23 @@
                                     <h6>Erro ao cadastrar o produto</h6>
 
                                     <h6>Deseja tentar novamente?</h6>
-                                
+
                                 </div>
                                 <div id="modalbuttom" class="row g-3">
-                                    
-                                   <button id="modalNao" class="btn btn-primary col-md-4" onclick="location.href=document.referrer">Não</button>
-                                    <button  id="modalSim" class="btn btn-primary col-md-4"  onclick="preserv()">SIM</button>
 
-                                   <!-- <button  id="modalSim" class="btn btn-primary col-md-4" >test</button>-->
+                                    <button id="modalNao" class="btn btn-primary col-md-4"
+                                        onclick="location.href=document.referrer">Não</button>
+                                    <button id="modalSim" class="btn btn-primary col-md-4"
+                                        onclick="preserv()">SIM</button>
+
+                                    <!-- <button  id="modalSim" class="btn btn-primary col-md-4" >test</button>-->
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>   
+                </div>
             </section>
         </section>
- 
     </main>
 </body>
 </html>
