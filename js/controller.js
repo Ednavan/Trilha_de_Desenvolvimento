@@ -27,6 +27,7 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
 
         } else {
             alert("Não é possível cadastrar objetos sem conter todos os dados!")
+            
         }
     }
 
@@ -60,7 +61,7 @@ angular.module("meuModulo").controller("indexController", function ($scope, $htt
             console.log(tratamento)
 
             $('#modaldadosalterados').modal("show")
-
+            
 
         }).catch(function () {
             console.log("chegou aqui");
@@ -195,6 +196,16 @@ function modalVoltar() {
 
 
 
+function valida_az(){
+	var filter_az = /^([aA-zZ]|\s)+$/ ;
+	if(!filter_az.test(document.getElementById("inputProduto").value)){
+	document.getElementById("inputProduto").value="";
+	document.getElementById("inputProduto").value = "";
+	document.getElementById("inputProduto").style.borderColor = "#ff0000";
+	document.getElementById("inputProduto").style.outline = "#ff0000";
 
-
-
+	document.getElementById("inputProduto").onkeydown = function (){
+	document.getElementById("inputProduto").style.borderColor = "#999999";
+	document.getElementById("inputProduto").style.outline = null;}
+	}
+}

@@ -43,10 +43,10 @@
     <main>
 
         <section class="container" >
-            <form class="row g-3 " id="formularioCadastro">
+            <form class="row g-3 " id="formularioCadastro" action="" onsubmit="valida_az(this);return false;">
                 <div class="col-12" >
-                    <label for="inputProduto" class="form-label">Nome do Produto:</label>
-                    <input type="text" class="form-control" ng-model="data.nome" id="inputProduto" ng-model="inputProduto" name="inputProduto"  onsubmit="formu()">
+                    <label for="inputProduto"  class="form-label">Nome do Produto:</label>
+                    <input type="text" class="form-control" onblur="valida_az()" ng-model="data.nome" id="inputProduto" ng-model="inputProduto" name="inputProduto"  onsubmit="formu()">
                     <label for="inputDescricao" class="form-label">Descrição do Produto:</label>
                     <input type="text" class="form-control" ng-model="data.descricao" id="inputDescricao" name="inputDescricao">
 
