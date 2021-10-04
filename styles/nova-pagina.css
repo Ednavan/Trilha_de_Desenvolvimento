@@ -2,7 +2,21 @@
     margin: 0;
     padding: 0;
 }
+@media (max-width: 575.98px){
+    #qtdproduto{
+    
+       right: 500px;
+   
+       position: relative;
+     }
+     
+    #addproduto{
+        position: relative;
+        right: 590px;
+      }
+ 
 
+}
 #menuInicial{
     top: 0;
     font-size: 25px;
