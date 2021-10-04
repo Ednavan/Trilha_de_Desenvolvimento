@@ -38,7 +38,7 @@
         display: block;
         grid-template-columns: repeat(auto-fit, minmax(250px, 2fr));
         margin-left: auto;
-        
+       
     }
    
     #dropdownMenuLink{
