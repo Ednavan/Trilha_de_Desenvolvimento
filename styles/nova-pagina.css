@@ -2,6 +2,20 @@
     margin: 0;
     padding: 0;
 }
+
+@media (min-width: 992px) and (max-width: 1199.98px){
+    #qtdproduto{
+        
+        margin-top: 220px;
+       
+        position: absolute;
+      }
+      
+     #addproduto{
+         position: relative;
+         right: 280px;
+       }
+}
 @media (max-width: 575.98px){
     #qtdproduto{
     
