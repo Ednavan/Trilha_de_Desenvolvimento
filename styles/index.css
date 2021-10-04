@@ -46,52 +46,28 @@
     }
 
 }
-/* 
-@media (min-width: 576px) and (max-width: 767.98px) {
+@media (min-width: 992px) and (max-width: 1199.98px){
     #meuInicial{
-        background: rgba(0, 183, 255, 0.521);
-        
-        
+       max-width: auto;
+       width: 100%;
     }
 
-    #meuInicial  h1  {
-        
-        max-width: 94%;
-        margin-right: 9%;
-        color: rgb(255, 255, 255);
-            
-        text-align: center;
-    }
-    nav{
-       
-        margin-top: 29px;
-    }
-
-    .submit-line input {
-        
-        max-width: 550px;
-        height: 40px;
-    }
-    #nav2 {
-      margin-right: 10%;
-    }
-  
+     
     .container-fluid.grid{
+        
+        padding-right: 1%;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(30%, 2fr));
     
         
-        display:block ;
-        margin-left: 12%;
-        
     }
-   
-    #dropdownMenuLink{
-        right: 75%;
-    }
+    .submit-line input {
+        max-width: 350%;
+         
+       
+     }
 
-} */
-
-
-
+}
 
 #meuInicial{
     top: 0;
